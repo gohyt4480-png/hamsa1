@@ -1,0 +1,2823 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همسة - </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ======== تم استبدال لوحة الألوان بالكامل بألوان "همسة" ======== */
+        :root {
+            --primary-color: #1F3A3D;
+            --secondary-color: #8EA6A3;
+            --neutral-color: #F2F5F4;
+            --button-color: #1F3A3D;
+            --text-color: #4A4A4A;
+            --light-text: #ffffff;
+            --dark-text: #1F3A3D;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --discount-color: #8EA6A3;
+            --exclusive-color: #1F3A3D;
+            --new-color: #8EA6A3;
+            --fast-delivery: #1F3A3D;
+            --confidential-color: #8EA6A3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* تم إضافة خط "Cairo" للخطوط الأساسية */
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: var(--dark-text); /* تم تغيير لون النص الأساسي */
+            direction: rtl;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* الهيدر */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: #f8f8f8;
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .header-top-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-top-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-main-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--button-color);
+            /* تم إضافة خط "Cairo" للشعار */
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--button-color);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-icon {
+            font-size: 1.2rem;
+            color: var(--dark-text);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .header-icon:hover {
+            color: var(--button-color);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            background-color: var(--button-color);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-btn {
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .login-btn:hover {
+            /* تم تعديل لون الـ hover ليتناسب */
+            background-color: #152a2c;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* قسم المنتجات */
+        .products-section {
+            padding: 40px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--dark-text);
+            position: relative;
+            padding-bottom: 15px;
+            font-family: 'Cairo', sans-serif; /* تم إضافة خط "Cairo" للعناوين */
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--button-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تم تعديل حجم حاوية الصورة */
+        .product-image-container {
+            height: 180px; /* تم تقليل الارتفاع من 200px إلى 180px */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px; /* إضافة padding لتقليل حجم الصورة أكثر */
+        }
+
+        /* تم تعديل حجم الصورة */
+        .product-image {
+            max-width: 90%; /* تقليل عرض الصورة */
+            max-height: 90%; /* تقليل ارتفاع الصورة */
+            object-fit: contain; /* تغيير من cover إلى contain لمنع التكبير */
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-text);
+            min-height: 2.4rem;
+        }
+
+        .product-price {
+            color: var(--button-color);
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.8rem;
+            margin-left: 6px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .add-to-cart {
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            width: 100%;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .add-to-cart:hover {
+            background-color: #152a2c; /* تم تعديل لون الـ hover */
+        }
+
+        /* علامات المنتجات - ستأخذ الألوان تلقائياً من :root */
+        .product-badges {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 10;
+        }
+
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .badge-discount {
+            background-color: var(--discount-color);
+        }
+
+        .badge-new {
+            background-color: var(--new-color);
+        }
+
+        .badge-exclusive {
+            background-color: var(--exclusive-color);
+        }
+
+        .badge-fast-delivery {
+            background-color: var(--fast-delivery);
+            color: var(--light-text); /* تم تعديل لون النص ليناسب الخلفية الداكنة */
+        }
+        
+        /* تمت إضافة شارة "همسة" للسرية */
+        .badge-confidential {
+            background-color: var(--confidential-color);
+            color: white;
+        }
+
+        /* قسم الاشتراك */
+        .subscription-section {
+            background-color: var(--secondary-color); /* سيأخذ لون "همسة" الثانوي */
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .subscription-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: var(--box-shadow);
+        }
+
+        .subscription-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .subscription-card p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .subscribe-btn {
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .subscribe-btn:hover {
+            background-color: #152a2c;
+            transform: translateY(-2px);
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #2c2c2c;
+            color: #f1f1f1;
+            padding: 40px 0 15px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+            color: white;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .footer-column h4::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 35px;
+            height: 2px;
+            background-color: var(--button-color);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color); /* تم التعديل ليطابق "همسة" */
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            background-color: #444;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--button-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* صفحة المنتج */
+        .product-page {
+            display: none;
+            padding: 30px 0;
+            background-color: white;
+        }
+
+        .product-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .product-gallery {
+            position: relative;
+        }
+
+        .main-product-image {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 12px;
+        }
+
+        .product-thumbnails {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .product-thumbnail {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .product-thumbnail:hover, .product-thumbnail.active {
+            border-color: var(--button-color);
+        }
+
+        .product-info-detail {
+            padding: 15px 0;
+        }
+
+        .product-title-detail {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: var(--dark-text);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .product-price-detail {
+            font-size: 1.6rem;
+            color: var(--button-color);
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .product-options {
+            margin-bottom: 20px;
+        }
+
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .option-values {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .option-value {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .option-value:hover, .option-value.selected {
+            background-color: var(--button-color);
+            color: white;
+            border-color: var(--button-color);
+        }
+
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .product-table th, .product-table td {
+            padding: 10px 12px;
+            text-align: right;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
+
+        .product-table th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+        }
+
+        .product-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .back-to-products {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            margin-bottom: 25px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .back-to-products:hover {
+            background-color: #7a9591; /* تم تعديل لون الـ hover */
+        }
+
+        /* العربة الطافية */
+        .floating-cart {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: var(--button-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .floating-cart:hover {
+            transform: scale(1.1);
+        }
+        
+        .floating-cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--secondary-color); /* تم تغييره من لون الخصم */
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* التجاوب مع الشاشات المختلفة (نفس الكود السابق) */
+        @media (max-width: 992px) {
+            .nav-menu {
+                gap: 15px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .product-details {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: white;
+                width: 100%;
+                flex-direction: column;
+                padding: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 8px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .product-image-container {
+                height: 160px; /* تم تعديل الارتفاع للشاشات الصغيرة */
+            }
+            
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .product-thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .subscription-card {
+                padding: 20px;
+            }
+            
+            .subscription-card h3 {
+                font-size: 1.6rem;
+            }
+            
+            .footer-content {
+                gap: 25px;
+            }
+
+            .floating-cart {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                left: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-main-container {
+                flex-wrap: wrap;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            
+            .subscription-card {
+                padding: 15px;
+            }
+            
+            .subscription-card h3 {
+                font-size: 1.4rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .footer-column h4::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .product-thumbnail {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .product-image-container {
+                height: 140px; /* تم تعديل الارتفاع للشاشات الصغيرة جداً */
+            }
+            
+            .product-info {
+                padding: 12px;
+            }
+            
+            .product-title {
+                font-size: 0.9rem;
+                min-height: 2.2rem;
+            }
+            
+            .product-price {
+                font-size: 1rem;
+            }
+            
+            .add-to-cart {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+            }
+            
+            .product-details {
+                gap: 20px;
+            }
+            
+            .product-title-detail {
+                font-size: 1.5rem;
+            }
+            
+            .product-price-detail {
+                font-size: 1.4rem;
+            }
+            
+            .option-value {
+                padding: 5px 10px;
+                font-size: 0.85rem;
+            }
+
+            .floating-cart {
+                width: 45px;
+                height: 45px;
+                bottom: 10px;
+                left: 10px;
+            }
+            
+            .floating-cart-count {
+                width: 20px;
+                height: 20px;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .product-image-container {
+                height: 120px; /* تم تعديل الارتفاع للشاشات الصغيرة جداً */
+            }
+            
+            .product-title {
+                font-size: 0.85rem;
+                min-height: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+        
+        <div class="container header-main-container">
+            <div class="logo">همسة</div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="التصنيفات.html">الأدوات</a></li>
+                <li><a href="make.html">الرفاهية الخاصة</a></li>
+                <li><a href="99.html">أقل من 99 ريال</a></li>
+                <li><a href="#">الاشتراك</a></li>
+                <li><a href="التصنيفات.html">عروض وباقات</a></li>
+                <li><a href="#">مدونة العناية</a></li>
+                <li><a href="#">تواصل معنا</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="#" class="header-icon">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="index.html" class="header-icon">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a href="sk.html" class="header-icon" id="cart-icon"> <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="login-btn" onclick="window.location.href='log.html'">تسجيل دخول</button> <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="products-section" id="products-section">
+        <div class="container">
+            <h2 class="section-title"></h2>
+            <div class="products-grid" id="featured-products">
+                </div>
+        </div>
+    </section>
+
+    <section class="product-page" id="product-page">
+        <div class="container">
+            <button class="back-to-products" id="back-to-products">← العودة إلى المنتجات</button>
+            
+            <div class="product-details" id="product-details">
+                </div>
+        </div>
+    </section>
+
+    <section class="subscription-section">
+        <div class="container">
+            <div class="subscription-card">
+                <h3>اشتراك شهري حصري</h3>
+                <p>احصل على صندوق شهري يحتوي على منتجات مختارة خصيصاً لك مع خصم يصل إلى 40% وتوصيل سري ومستتر</p>
+                <button class="subscribe-btn">اشترك الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>عن المتجر</h4>
+                    <p>متجرنا يقدم أجود المنتجات مع ضمان الجودة والخصوصية والخدمة المتميزة.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">تتبع الطلب</a></li>
+                        <li><a href="#">الاشتراك</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>المساعدة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">طرق الدفع</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>القائمة البريدية</h4>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر العروض والأخبار</p>
+                    <form>
+                        <input type="email" placeholder="بريدك الإلكتروني" style="padding: 10px; width: 100%; margin-bottom: 10px; border-radius: var(--border-radius); border: none;">
+                        <button type="submit" class="subscribe-btn" style="width: 100%; padding: 10px;">اشتراك</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 همسة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-cart" id="floating-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="floating-cart-count">0</span>
+    </div>
+
+    <script>
+        const products = [
+
+  {
+    "id": 1,
+    "name": "جهاز Satisfyer Pro 2 الهزاز - بتقنية الموجات الضاغطة والشفط للمتعة القصوى",
+    "price": "90 د.ك",
+    "originalPrice": "120 د.ك",
+    "discount": "25%",
+    "image": "https://m.media-amazon.com/images/I/517SgUUY+9L._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مُحفزات البظر بالشفط",
+    "description": "تجربة لا تُنسى: جهاز Satisfyer الأيقوني، المفضل عالميًا، يجمع بين الموجات الضاغطة وتقنية Airpulse الثورية لتحفيز البظر والوصول إلى النشوة بشكل لم يسبق له مثيل. يتميز بتصميم مريح و11 مستوى مختلف من شدة الموجات الضاغطة.",
+    "images": [
+      "https://m.media-amazon.com/images/I/517SgUUY+9L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51BWc59R0pL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51CtYUH0veL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61LnkAchIbL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "وردي فاتح"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "مُحفز بظر بتقنية الموجات الضاغطة",
+      "العلامة التجارية": "Satisfyer",
+      "الموديل": "Pro 2",
+      "المادة": "سيليكون آمن على الجلد (Skin-friendly Silicone)",
+      "مستويات الاهتزاز": "11 مستوى لشدة الموجات",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "لتحفيز البظر والمتعة الأنثوية",
+      "الخصوصية": "توصيل بخصوصية تامة"
+    },
+    "features": [
+      "تقنية Airpulse لتحفيز دقيق ومكثف.",
+      "مقاوم للماء بالكامل وسهل التنظيف.",
+      "11 إعدادًا مختلفًا لشدة الموجات.",
+      "مصنوع من سيليكون ناعم وآمن على الجسم.",
+      "شحن مغناطيسي سريع عبر USB."
+    ],
+    "howToUse": "1. اشحني الجهاز بالكامل.\n2. ضعي فوهة الجهاز على البظر مباشرة دون تلامس.\n3. استخدمي أزرار (+) و (-) لاختيار مستوى الشدة المناسب.",
+    "benefits": "نشوة مكثفة ومختلفة عن الاهتزاز التقليدي بفضل تقنية الموجات الضاغطة."
+  },
+  {
+    "id": 2,
+    "name": "كرات شرجية و سدادة هزازة - سيليكون قابلة لإعادة الشحن للرجال والنساء",
+    "price": "40 د.ك",
+    "originalPrice": "55 د.ك",
+    "discount": "27%",
+    "image": "https://m.media-amazon.com/images/I/51rdwMwXafL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "سدادات وكرات شرجية هزازة",
+    "description": "تصميم فريد للمبتدئين: يمكن استخدام هذا الجهاز الهزاز كمدلك للبروستاتا أو سدادة شرجية أو محفز للبقعة G. يتميز بخرز متدرج يجعله مثاليًا ومناسبًا لمعظم المقاسات، مما يوفر متعة شرجية رائعة سواء كنت مبتدئًا أو متوسط الخبرة. يوفر أنماط اهتزاز متعددة وقوية.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51rdwMwXafL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51UAZ0dbVWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51Gi0RhCErL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51690LSz3fL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "بنفسجي فاتح"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "سدادة وكرات شرجية هزازة",
+      "العلامة التجارية": "عام",
+      "الموديل": "خرز شرجي هزاز",
+      "المادة": "سيليكون ناعم وآمن",
+      "أنماط الاهتزاز": "متعددة السرعات والترددات",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "إعادة شحن عبر USB (3 ساعات لشحن كامل)",
+      "الاستخدام": "للتحفيز الشرجي والبروستاتا والبقعة G"
+    },
+    "features": [
+      "تصميم متدرج مثالي للمبتدئين.",
+      "اهتزازات قوية ومتعددة الترددات.",
+      "مصنوع من سيليكون ناعم وآمن على الجسم.",
+      "قابلة لإعادة الشحن للاستخدام المتنقل.",
+      "تغليف سري (Discreet Packaging) لخصوصيتك."
+    ],
+    "howToUse": "1. اشحني الجهاز قبل الاستخدام.\n2. استخدمي مزلق مائي.\n3. ابدئي بأدنى مستوى اهتزاز وزيدي الشدة تدريجياً.",
+    "benefits": "تجربة متعة شرجية مريحة ومحفزة بفضل التصميم المبتكر والاهتزاز القوي."
+  },
+  {
+    "id": 3,
+    "name": "جهاز هزاز (الأرنب المزدوج) من plusOne - محرك مزدوج بـ 10 إعدادات اهتزاز",
+    "price": "33 د.ك",
+    "originalPrice": "45 د.ك",
+    "discount": "27%",
+    "image": "https://m.media-amazon.com/images/I/51q4z8qwpdL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "جديد",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "اهتزاز داخلي وخارجي (الأرنب)",
+    "description": "متعة مضاعفة: يتميز هذا الهزاز ثنائي المحرك، ورأسين يهتزان بشكل مستقل، و10 خيارات اهتزاز، مما يوفر تحفيزًا داخليًا وخارجيًا في وقت واحد. مثالي للعب الفردي أو مع الشريك. مصنوع من سيليكون آمن على الجسم ومقاوم للماء بالكامل.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51q4z8qwpdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71BI6kPwSsL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/7156ISgJARL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/715krm7eS3L._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أرجواني"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "هزاز داخلي وخارجي (الأرنب المزدوج)",
+      "العلامة التجارية": "plusOne",
+      "الموديل": "Dual Rabbit Vibrator",
+      "المادة": "سيليكون آمن على الجسم",
+      "أنماط الاهتزاز": "10 إعدادات اهتزاز قوية ومختلفة",
+      "المحركات": "محركان منفصلان",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "لتحفيز البظر والبقعة G"
+    },
+    "features": [
+      "تحفيز مزدوج (داخلي وخارجي) لمتعة شاملة.",
+      "10 إعدادات اهتزاز قوية ومتنوعة.",
+      "مصنوع من سيليكون ناعم آمن وخالٍ من المواد الضارة.",
+      "مقاوم للماء بالكامل للاستخدام في الحمام.",
+      "مناسب للعب الفردي أو الزوجي."
+    ],
+    "howToUse": "1. اشحني الجهاز.\n2. استخدمي مزلق مائي.\n3. أدخلي الطرف المنحني ووجهي الجزء الخارجي نحو البظر.\n4. اختاري نمط الاهتزاز المفضل.",
+    "benefits": "وصول سريع ومكثف إلى النشوة بفضل التحفيز المتزامن للبظر والبقعة G."
+  },
+  {
+    "id": 4,
+    "name": "مدلك (العصا السحرية) القابل لإعادة الشحن - لون أبيض",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/31dE8DuB1PL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مدلكات عصا (Wand Massagers)",
+    "description": "مدلك عصا قوي ولاسلكي: يتميز بقوة فائقة وأداء لاسلكي مريح. يوفر اهتزازات متعددة السرعات والوظائف لتحفيز أي منطقة تريدينها. يمكن استخدامه لتدليك العضلات أو كأداة للمتعة الشخصية.",
+    "images": [
+      
+      "https://m.media-amazon.com/images/I/31dE8DuB1PL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/31X4640OleL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أبيض",
+      "أسود",
+      "وردي"
+    ],
+    "sizes": [
+      "مقاس كبير"
+    ],
+    "details": {
+      "النوع": "مدلك عصا هزاز (Wand Massager)",
+      "العلامة التجارية": "عام",
+      "الموديل": "لاسلكي قابل لإعادة الشحن",
+      "المادة": "رأس من السيليكون الناعم",
+      "أنماط الاهتزاز": "متعددة السرعات والوظائف",
+      "الطاقة": "لاسلكي (قابلة لإعادة الشحن)",
+      "الاستخدام": "لتحفيز الجسم أو تدليك العضلات"
+    },
+    "features": [
+      "اهتزازات عميقة وقوية جدًا.",
+      "تصميم لاسلكي مريح وسهل الاستخدام.",
+      "رأس مرن يتيح التوجيه الدقيق للاهتزاز.",
+      "بطارية تدوم طويلاً.",
+      "متعدد الاستخدامات للتدليك أو المتعة الشخصية."
+    ],
+    "howToUse": "1. اضغطي زر التشغيل لاختيار وضع الاهتزاز.\n2. استخدمي الرأس لتطبيق الاهتزاز على المنطقة المطلوبة.",
+    "benefits": "قوة اهتزاز لا مثيل لها لمتعة مكثفة أو تدليك عميق للعضلات."
+  },
+  {
+    "id": 5,
+    "name": "قضيب صناعي (ديلدو) واقعي من Doc Johnson - حجم 13.5 إنش - مادة ULTRASKYN - مع قاعدة شفط",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/814JP-G8WjL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قضبان صناعية (Dildos)",
+    "description": "مصنوع يدويًا من مادة **ULTRASKYN** لتقديم الإحساس الواقعي المطلق. مصبوب مباشرةً عن نموذج 'Dredd' المشهور، يوفر ملمسًا وشكلاً واقعيًا للغاية. يأتي بقاعدة شفط قابلة للإزالة لتثبيته على أي سطح أملس أو استخدامه مع حزام (Harness).",
+    "images": [
+      "https://m.media-amazon.com/images/I/814JP-G8WjL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "بني شوكولاتة"
+    ],
+    "sizes": [
+      "طول 13.5 إنش"
+    ],
+    "details": {
+      "النوع": "قضيب صناعي (ديلدو) واقعي",
+      "العلامة التجارية": "Doc Johnson",
+      "الموديل": "Signature Series - Dredd",
+      "المادة": "ULTRASKYN (مادة شبيهة بالجلد وواقعية الملمس)",
+      "الطول": "13.5 بوصة",
+      "الميزات": "قاعدة شفط قابلة للإزالة، متوافق مع أحزمة الربط",
+      "الاستخدام": "إيلاج مهبلي وشرجي"
+    },
+    "features": [
+      "ملمس شديد الواقعية بفضل مادة ULTRASKYN.",
+      "قاعدة شفط قوية للاستخدام بدون يدين.",
+      "طول كبير لإحساس بالإشباع العميق.",
+      "سهل التنظيف وآمن على الجسم."
+    ],
+    "howToUse": "1. يُفضل استخدام مزلق مائي.\n2. يمكن تثبيته على سطح أملس باستخدام قاعدة الشفط.",
+    "benefits": "تجربة واقعية ومكثفة بفضل المواد عالية الجودة والواقعية."
+  },
+  {
+    "id": 6,
+    "name": "قضيب صناعي (ديلدو) مزدوج الأطراف - جل شفاف واقعي مع عروق - 11.8 إنش",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/41+jeJsOr7L._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قضبان صناعية مزدوجة الأطراف",
+    "description": "قضيب صناعي مزدوج الأطراف بطول 11.8 إنش، يتميز بشكل واقعي مع حشفة وعروق واضحة. المادة المصنوع منها هي الجل الشفاف (Jelly) الناعم وغير المسامي، مما يجعله سهل التنظيف ومتعدد الاستخدامات للعب الفردي أو مع الشريك.",
+    "images": [
+      "https://m.media-amazon.com/images/I/41osS1bDeSL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/41+jeJsOr7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51cXCmsvPXL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "شفاف"
+    ],
+    "sizes": [
+      "طول 11.8 إنش"
+    ],
+    "details": {
+      "النوع": "قضيب صناعي مزدوج الأطراف",
+      "العلامة التجارية": "عام",
+      "الموديل": "Double Dildo Clear Jelly",
+      "المادة": "جيل شفاف (Jelly) غير مسامي",
+      "الطول": "11.8 بوصة",
+      "الميزات": "رأس واقعي، عروق بارزة، تصميم مزدوج.",
+      "الاستخدام": "للمتعة المزدوجة أو الفردية، إيلاج مهبلي وشرجي"
+    },
+    "features": [
+      "متعة مضاعفة بفضل التصميم ثنائي الأطراف.",
+      "ملمس ناعم ولكنه صلب لإحساس مرضي.",
+      "شكل واقعي مع تفاصيل العروق والحشفة.",
+      "مادة غير مسامية لسهولة التعقيم والتنظيف."
+    ],
+    "howToUse": "1. استخدمي مزلق مائي على كلا الطرفين.\n2. يمكن استخدامه بشكل مزدوج أو فردي.",
+    "benefits": "مثالي للأزواج الذين يرغبون في الاستمتاع المشترك وتجربة المتعة من طرفين."
+  },
+  {
+    "id": 7,
+    "name": "مجموعة رؤوس مرفقة لجهاز التدليك (العصا الهزازة) - 6 قطع لتخفيف الضغط",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/61tt4N4qdhL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "ملحقات أجهزة التدليك",
+    "description": "مجموعة شاملة: تأتي مع مدلك عصا قوي و6 رؤوس مرفقة مختلفة التصميم. كل قطعة مصممة خصيصًا لاستهداف مناطق معينة من الجسم مثل الظهر والرقبة والساقين واليدين لتخفيف آلام العضلات وضغطها. مثالية للاستخدام المنزلي والمكتبي.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61tt4N4qdhL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71iyWxV5w7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/31X4640OleL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أسود وشفاف"
+    ],
+    "sizes": [
+      "مجموعة 6 قطع"
+    ],
+    "details": {
+      "النوع": "مجموعة ملحقات لجهاز التدليك العصا",
+      "العلامة التجارية": "عام",
+      "الموديل": "Wand Massager Attachments",
+      "المادة": "سيليكون آمن ومرن",
+      "القطع": "6 رؤوس مرفقة مختلفة الأشكال",
+      "الميزات": "مصممة لتخفيف الضغط واستهداف مناطق محددة",
+      "الاستخدام": "للجسم بالكامل (الظهر، الرقبة، الساقين، اليدين... إلخ)"
+    },
+    "features": [
+      "تنوع في الرؤوس لتناسب جميع عضلات الجسم.",
+      "تخفيف فعال لآلام وتشنجات العضلات.",
+      "سهلة التركيب والإزالة والتنظيف.",
+      "يمكن استخدامها مع معظم أجهزة التدليك العصا القياسية."
+    ],
+    "howToUse": "1. قومي بتركيب الرأس المناسب لمنطقة التدليك على جهاز العصا.\n2. شغلي الجهاز واضغطي بلطف على المنطقة المستهدفة.",
+    "benefits": "تدليك علاجي عميق وشامل لجميع أجزاء الجسم."
+  },
+  {
+    "id": 8,
+    "name": "قلادة مشابك حلمات غير خارقة قابلة للتعديل - مجوهرات جسم ببطانات سيليكون ناعمة",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/51-bt-ElRCL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مشابك ومقيدات",
+    "description": "مجوهرات جسم فريدة: قلادة على شكل Y بتصميم مشابك حلمات غير خارقة، تتميز ببطانات سيليكون ناعمة تضمن الراحة أثناء الارتداء الطويل. تصميم قابل للتعديل يضمن ملاءمة مثالية ومناسبة لمختلف الاستخدامات، سواء للاستخدام اليومي أو المناسبات الخاصة وللعب مع الشريك.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51-bt-ElRCL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71jC7+piDzL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71O5FBL+x2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71awe-S4jsL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أزرق"
+    ],
+    "sizes": [
+      "مقاس واحد قابل للتعديل"
+    ],
+    "details": {
+      "النوع": "قلادة مشابك حلمات غير خارقة",
+      "العلامة التجارية": "عام",
+      "الموديل": "Nipple Clamps Y Necklace",
+      "المادة": "معدن خفيف الوزن مع بطانات سيليكون",
+      "اللون": "أزرق",
+      "الميزات": "قابل للتعديل، غير خارق للجلد، بطانات سيليكون ناعمة",
+      "الاستخدام": "لعب الإثارة وتحفيز الحلمات"
+    },
+    "features": [
+      "تحفيز بدون الحاجة إلى ثقب (Piercing).",
+      "بطانات سيليكون لارتداء مريح وآمن.",
+      "طول قابل للتعديل ليناسب جميع الأجسام.",
+      "مجوهرات جسم مثيرة للاهتمام واللعب."
+    ],
+    "howToUse": "1. افتحي المشابك برفق وضعيها على الحلمات.\n2. اضبطي شد المشابك بالقدر المريح لك.",
+    "benefits": "إضافة مثيرة وآمنة لتجارب الإثارة واللعب الزوجي."
+  },
+  {
+    "id": 9,
+    "name": "سدادة شرجية صغيرة بتصميم مجوهرات - معدن صلب وناعم - لون أزرق فاتح",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/51Sumov2D9L._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "سدادات شرجية (Butt Plugs)",
+    "description": "سدادة شرجية صغيرة الحجم بتصميم **مجوهرات** فاخر. مصنوعة من المعدن الصلب والناعم. تتميز بقاعدة واسعة مزينة بقطعة جوهرة بلون أزرق فاتح، مثالية للمبتدئين أو لمن يفضل الحجم الصغير والتصميم الجمالي لارتدائها.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51Sumov2D9L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51aHK70U+ML._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61RuwBH4AuL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51Rk8jGf7HL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أزرق فاتح"
+    ],
+    "sizes": [
+      "مقاس صغير"
+    ],
+    "details": {
+      "النوع": "سدادة شرجية معدنية",
+      "العلامة التجارية": "Akstore",
+      "الموديل": "Small Fetish Anal Plug",
+      "المادة": "معدن صلب، آمن على الجسم",
+      "الميزات": "تصميم مجوهرات (Jewel Adornment)، قاعدة واسعة للسلامة.",
+      "الاستخدام": "تحفيز شرجي وارتداء"
+    },
+    "features": [
+      "تصميم جمالي على شكل جوهرة للارتداء.",
+      "مصنوع من المعدن الصلب لدرجات الحرارة المختلفة (الساخنة والباردة).",
+      "قاعدة واسعة ومريحة لضمان السلامة.",
+      "مثالية للمبتدئين بسبب حجمها الصغير."
+    ],
+    "howToUse": "1. يُفضل تسخينها أو تبريدها (اختياري).\n2. استخدمي مزلق مائي بكمية كافية.\n3. قومي بإدخالها ببطء مع الاسترخاء.",
+    "benefits": "تحفيز حراري (بالتسخين أو التبريد) وتصميم أنيق للاستمتاع."
+  },
+  {
+    "id": 11,
+    "name": "مضخة تفريغ (فراغ) يدوية للرجال - Cob لزيادة الحجم والصلابة",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/51p8iKqmgUL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مضخات وأدوات تكبير",
+    "description": "مضخة تفريغ يدوية: تعمل هذه المضخة على إنشاء فراغ (Vacuum) لإنتاج ضغط يزيد من تدفق الدم، مما يعزز قوة الانتصاب ويحسن الحجم والحساسية بشكل مؤقت. أداة بسيطة وفعالة للاستخدام الشخصي.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51p8iKqmgUL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51NDmvnIfaL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61JCMGWvLWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61ty0NI7ukL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/519oXejB5zL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "شفاف وأزرق"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "مضخة تفريغ يدوية",
+      "العلامة التجارية": "Cob",
+      "الموديل": "Manual Vacuum Pump",
+      "المادة": "بلاستيك صلب (الأسطوانة) وسيليكون (الختم)",
+      "الميزات": "قياس ضغط يدوي، تعزيز تدفق الدم.",
+      "الاستخدام": "لتحسين قوة الانتصاب والحجم المؤقت"
+    },
+    "features": [
+      "طريقة آمنة وغير جراحية لتعزيز الانتصاب.",
+      "تأثير مؤقت في زيادة الحجم.",
+      "سهلة الاستخدام والتنظيف.",
+      "تعزز حساسية المنطقة."
+    ],
+    "howToUse": "1. أدخل المنطقة في الأسطوانة.\n2. استخدم المضخة اليدوية لسحب الهواء وإنشاء فراغ.",
+    "benefits": "تحسين الأداء والثقة بالنفس من خلال تعزيز الانتصاب."
+  },
+  {
+    "id": 12,
+    "name": "كرات شرجية زجاجية صغيرة بـ 4 خرزات - قاعدة على شكل وردة للسلامة - للمبتدئين",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/51etPQBhJ7L._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "كرات شرجية زجاجية",
+    "description": "مدلك كريستالي صغير على شكل 4 خرزات، مصنوع من الزجاج الآمن. يتميز بقاعدة مستديرة على شكل وردة لضمان عدم الإدخال بالكامل. مثالي للتحفيز الشرجي واللعب الزوجي، ومناسب جدًا للمبتدئين.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51etPQBhJ7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/6110d1OAm0L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51pg728gPkL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61pe0n1isdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61ujgPDlbgL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61YrGXLMEmL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "كريستالي شفاف"
+    ],
+    "sizes": [
+      "مقاس صغير (4 خرزات)"
+    ],
+    "details": {
+      "النوع": "كرات شرجية زجاجية",
+      "العلامة التجارية": "عام",
+      "الموديل": "4 Beads Glass Anal Beads",
+      "المادة": "زجاج صلب، غير مسامي",
+      "الميزات": "قاعدة وردة للسلامة، يمكن تسخينه أو تبريده.",
+      "الاستخدام": "تدريب وتحفيز شرجي، مناسب للمبتدئين"
+    },
+    "features": [
+      "مادة زجاجية ناعمة لسهولة التنظيف والتعقيم.",
+      "يمكن استخدامه للعب بدرجات الحرارة (ساخن أو بارد).",
+      "تصميم آمن بقاعدة واسعة.",
+      "شكل كرات متدرجة للمبتدئين."
+    ],
+    "howToUse": "1. استخدمي مزلق مائي.\n2. أدخلي ببطء، واسحبيها للخارج برفق للتحفيز.",
+    "benefits": "تجربة تحفيز شرجي جديدة وآمنة مع إمكانية اللعب بالحرارة."
+  },
+  {
+    "id": 13,
+    "name": "دمية متعة للرجال 2 في 1 - قناة مهبلية وشرجية - ملمس واقعي وقابل للضغط",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/51OVLT28LmL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مدلكات ذكرية ومصنوعات",
+    "description": "جهاز متعة للرجال 2 في 1: يوفر قناتين محكمتين وواقعيتين (تحاكي المهبل والشرج) بتفاصيل داخلية حبيبية دقيقة لتقديم شعور أكثر واقعية وممتع. مصنوع من مادة ناعمة وقابلة للضغط، يضمن قبضة محكمة وإحساسًا حيًا.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51OVLT28LmL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61US2FnQUGL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61vMptJ8ZSL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61UZ-Qx6wWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71VrnxYQ+TL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "لون لحمي"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "مدلك ذكري 2 في 1",
+      "العلامة التجارية": "عام",
+      "الموديل": "Male Masturbator",
+      "المادة": "TPE ناعم وواقعي الملمس",
+      "الميزات": "قناتان (مهبل وشرج)، نسيج داخلي محبب، قابلة للضغط.",
+      "الاستخدام": "للمتعة الذاتية"
+    },
+    "features": [
+      "قناتان بتجارب مختلفة ومحكمة.",
+      "ملمس واقعي للغاية وإحساس حي.",
+      "نسيج داخلي محبب يزيد من الاحتكاك.",
+      "تصميم يتيح اللعب بالضغط."
+    ],
+    "howToUse": "1. ضعي كمية كافية من المزلق المائي.\n2. أدخلي برفق واستمتعي بالحركة والضغط.",
+    "benefits": "شعور بالواقعية والإشباع مع خيارات تحفيز مزدوجة."
+  },
+  {
+    "id": 14,
+    "name": "مشابك حلمات هزازة قوية بتقنية الشفط - 10 أوضاع اهتزاز - قابلة لإعادة الشحن",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/61WamfA8YwL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مُحفزات حلمات بتقنية الشفط",
+    "description": "جهاز مبتكر: مشابك حلمات قوية تعمل بتقنية الشفط والاهتزاز، وتوفر 10 أوضاع دوران واهتزاز مختلفة. قابلة لإعادة الشحن وتُستخدم لتحفيز الحلمات بشكل مكثف ومُرضٍ للعب الفردي أو الزوجي.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61WamfA8YwL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71upG+TutqL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71kOCQpnT2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61ck+Iwrh7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71F9tW4g63L._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "وردي"
+    ],
+    "sizes": [
+      "زوج واحد"
+    ],
+    "details": {
+      "النوع": "مشابك حلمات هزازة بتقنية الشفط",
+      "العلامة التجارية": "عام",
+      "الموديل": "Nipple Toy Clamps",
+      "المادة": "سيليكون آمن على الجلد و ABS",
+      "أنماط الاهتزاز": "10 أوضاع للاهتزاز والدوران",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "لتحفيز الحلمات"
+    },
+    "features": [
+      "اهتزاز ودوران قويان لتحفيز مكثف.",
+      "تقنية الشفط لتثبيت آمن ومريح.",
+      "10 أوضاع مختلفة لتجربة متنوعة.",
+      "قابلة لإعادة الشحن وسهلة التنظيف."
+    ],
+    "howToUse": "1. ضعيها على الحلمة وشغليها.\n2. اختاري وضع الاهتزاز والدوران المفضل لديك.",
+    "benefits": "تحفيز جديد للحلمات يصل إلى أعلى مستويات الإثارة والنشوة."
+  },
+  {
+    "id": 15,
+    "name": "هزاز (ديلدو) البقعة G مع تحكم عبر التطبيق - أوضاع ذكية - للعب الزوجي",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/61M01rjpFcL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "أجهزة هزازة بتطبيق ذكي",
+    "description": "جهاز ذكي للتحكم عن بعد: هزاز مصمم خصيصاً لتحفيز البقعة G، يتميز بإمكانية التحكم به عبر تطبيق ذكي (APP) على الهاتف، مما يتيح أنماط اهتزاز مخصصة والتحكم به عن بعد. مثالي للاستكشاف الفردي أو لرفع مستوى اللعب الزوجي عن طريق التحكم من مسافة بعيدة.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61M01rjpFcL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61Pm0BWmHmL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/615VgmMdd5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71wBiH6WRJL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61lDOmKrCDL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "وردي فاقع"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "هزاز البقعة G مع تحكم بالتطبيق",
+      "العلامة التجارية": "عام",
+      "الموديل": "APP Modes G Spot Vibrator",
+      "المادة": "سيليكون ناعم آمن",
+      "أنماط الاهتزاز": "متعددة + أنماط مخصصة عبر التطبيق",
+      "الشحن": "إعادة شحن عبر USB",
+      "الميزات": "تحكم عبر البلوتوث والتطبيق، تحفيز مباشر للبقعة G.",
+      "الاستخدام": "لتحفيز البقعة G واللعب الزوجي عن بعد"
+    },
+    "features": [
+      "تحكم عن بعد بواسطة التطبيق لمتعة اللعب الزوجي.",
+      "تصميم منحني ومخصص لاستهداف البقعة G بدقة.",
+      "إمكانية تخصيص أنماط الاهتزاز الخاصة بك.",
+      "مصنوع من سيليكون آمن ومقاوم للماء."
+    ],
+    "howToUse": "1. قومي بتنزيل التطبيق وربط الجهاز بالبلوتوث.\n2. استخدمي المزلق المائي وأدخلي الهزاز.\n3. ابدئي بالتحكم في الاهتزاز عبر التطبيق أو الأزرار اليدوية.",
+    "benefits": "تجربة متعة تفاعلية ومبتكرة مع إمكانية التحكم الكامل عن بعد."
+  },{
+    "id": 31,
+    "name": "جهاز تدليك البروستاتا والقضيب",
+    "price": "40 د.ك",
+    "originalPrice": "55 د.ك",
+    "discount": "27%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889675340-porngamesshop.com_-2-229x300.png",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "أجهزة تدليك البروستاتا",
+    "description": "جهاز مصمم خصيصًا للرجال، يوفر تحفيزًا مزدوجًا للبروستاتا (عن طريق الإدخال) والعجان (Perineum) أو القضيب (خارجيًا). يساعد على الاسترخاء العميق ويعزز المتعة الذكورية من خلال استهداف بقعة P-spot.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889675340-porngamesshop.com_-2-229x300.png"
+    ],
+    "colors": [
+      "بنفسجي فاتح"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "جهاز تدليك البروستاتا والقضيب (Prostate & Penis Massager)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Dual Stimulation Prostate Massager",
+      "المادة": "سيليكون آمن على الجسم",
+      "أنماط الاهتزاز": "أنماط اهتزاز متعددة (للجزء الداخلي والخارجي)",
+      "مقاومة الماء": "مقاوم للماء (للغسيل والتنظيف)",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "تحفيز البروستاتا (P-Spot) والعجان"
+    },
+    "features": [
+      "تصميم مريح ينحني لتدليك البروستاتا بفعالية.",
+      "ذراع خارجي لتدليك العجان أو القضيب في نفس الوقت.",
+      "محركات اهتزاز قوية بسرعات وأنماط متنوعة.",
+      "مصنوع من سيليكون ناعم وآمن على الجسم.",
+      "مثالي للمتعة الذكورية الفردية."
+    ],
+    "howToUse": "1. اشحن الجهاز قبل الاستخدام.\n2. استخدم مزلقًا مائيًا بكثرة.\n3. أدخل الطرف المخصص للبروستاتا برفق.\n4. استمتع بالاهتزازات الداخلية والخارجية.",
+    "benefits": "يوفر تحفيزًا مزدوجًا ومستهدفًا للبروستاتا والعجان لمتعة ذكورية مكثفة وعميقة."
+  },
+  {
+    "id": 32,
+    "name": "استمتع بالاسترخاء مع عصا التدليك الذكية (الحجم الكبير)",
+    "price": "33 د.ك",
+    "originalPrice": "45 د.ك",
+    "discount": "27%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889675675-2000_5da8fbc649854.webp",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "جديد",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "أجهزة تدليك (Wands)",
+    "description": "عصا تدليك قوية (Wand) مصممة للاسترخاء وتخفيف آلام العضلات، أو للتحفيز الخارجي القوي. رأسها الكبير والمرن يوزع اهتزازات عميقة وقوية. مثالية لتدليك الظهر، الأكتاف، أو لتحفيز البظر بشكل مكثف.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889675675-2000_5da8fbc649854.webp"
+    ],
+    "colors": [
+      "أرجواني"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "عصا تدليك (Wand Massager)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Large Smart Wand Massager",
+      "المادة": "سيليكون (الرأس)، بلاستيك (الجسم)",
+      "الوظائف": "سرعات وأنماط اهتزاز متعددة وقوية جدًا",
+      "مقاومة الماء": "مقاوم للرذاذ (أو مقاوم للماء حسب الموديل)",
+      "الشحن": "إعادة شحن عبر USB (أو يعمل بالكهرباء)",
+      "الاستخدام": "تدليك الجسم، تحفيز البظر الخارجي"
+    },
+    "features": [
+      "رأس كبير ومرن لتوزيع الاهتزازات.",
+      "محرك قوي جدًا لتدليك عميق واهتزازات قوية.",
+      "سرعات وأنماط متعددة للتحكم الكامل.",
+      "تصميم مريح لسهولة الوصول لمناطق الجسم المختلفة.",
+      "مثالي للاسترخاء العضلي أو المتعة الخارجية."
+    ],
+    "howToUse": "1. اشحن الجهاز (أو وصله بالكهرباء).\n2. اضغط زر التشغيل واختر السرعة.\n3. استخدمه لتدليك العضلات المتعبة أو للتحفيز الخارجي.",
+    "benefits": "يوفر اهتزازات قوية وعميقة (Rumbly) مثالية للاسترخاء العضلي أو الوصول لمتعة خارجية مكثفة."
+  },
+  {
+    "id": 33,
+    "name": "سداده شرجية هزازة",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889675811-analplug-nocolour-nosize-2008827-detail-.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "سدادات شرجية (Anal Plugs)",
+    "description": "سدادة شرجية مصممة لتوفير إحساس بالامتلاء مع إضافة اهتزازات مثيرة. تأتي بقاعدة عريضة للأمان ومنع الانزلاق الكامل. مثالية للمبتدئين والمتقدمين الراغبين في إضافة بُعد جديد للمتعة الشرجية.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889675811-analplug-nocolour-nosize-2008827-detail-.jpg"
+    ],
+    "colors": [
+      "أزرق"
+    ],
+    "sizes": [
+      "مقاس واحد (صغير/متوسط)"
+    ],
+    "details": {
+      "النوع": "سدادة شرجية هزازة (Vibrating Anal Plug)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Vibrating Anal Plug",
+      "المادة": "سيليكون آمن على الجسم",
+      "الوظائف": "أنماط اهتزاز متعددة",
+      "مقاومة الماء": "مقاومة للماء",
+      "الشحن": "بطاريات أو إعادة شحن (حسب الموديل)",
+      "الاستخدام": "تحفيز شرجي"
+    },
+    "features": [
+      "تصميم مدبب لسهولة الإدخال.",
+      "قاعدة عريضة وآمنة (Flared base) لمنع الانزلاق.",
+      "محرك اهتزاز مدمج بسرعات وأنماط مختلفة.",
+      "مصنوعة من سيليكون ناعم ومريح وآمن للجسم.",
+      "سهلة التنظيف."
+    ],
+    "howToUse": "1. نظف الجهاز جيدًا قبل وبعد الاستخدام.\n2. استخدم مزلقًا مائيًا أو سيليكونيًا بكثرة.\n3. أدخل السدادة برفق.\n4. قم بتشغيل الاهتزازات.",
+    "benefits": "يجمع بين الشعور بالامتلاء والتحفيز الاهتزازي المثير للمنطقة الشرجية."
+  },
+  {
+    "id": 34,
+    "name": "استمتع بتجربة فريدة مع سدادة الحب مع أهتزاز وتحكم عن بعد",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889562588-2000_63ca45dd08d42.webp",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "سدادات شرجية (Anal Plugs)",
+    "description": "سدادة (غالبًا شرجية باسم 'Plug') مصممة للعب الزوجي والمغامرات. تتميز باهتزازات قوية يمكن التحكم بها عن بعد، مما يسمح للشريك بالتحكم في المتعة. مثالية للاستخدام في المنزل أو للمغامرة خارج المنزل.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889562588-2000_63ca45dd08d42.webp"
+    ],
+    "colors": [
+      "بني شوكولاتة"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "سدادة هزازة مع تحكم عن بعد (Remote Control Vibrating Plug)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Remote Control Love Plug",
+      "المادة": "سيليكون آمن على الجسم",
+      "الوظائف": "اهتزازات متعددة، تحكم لاسلكي عن بعد",
+      "مقاومة الماء": "مقاومة للماء",
+      "الشحن": "إعادة شحن عبر USB (للجهاز والريموت أحيانًا)",
+      "الاستخدام": "تحفيز شرجي (أو مهبلي)، لعب زوجي"
+    },
+    "features": [
+      "تحكم لاسلكي عن بعد لمتعة مشتركة أو المداعبة عن بعد.",
+      "تصميم مريح (وقاعدة آمنة إذا كانت شرجية).",
+      "أنماط اهتزاز متنوعة لزيادة الإثارة.",
+      "قابلة لإعادة الشحن ومصنوعة من مواد آمنة.",
+      "مثالية لإضافة عنصر المفاجأة للعب الزوجي."
+    ],
+    "howToUse": "1. اشحن الجهاز.\n2. استخدم مزلقًا مناسبًا.\n3. أدخل السدادة.\n4. استخدم الريموت للتحكم في الاهتزازات (يمكن أن يحمله الشريك).",
+    "benefits": "مثالية للعب الزوجي والمداعبة عن بعد، مما يضيف عنصر المفاجأة والإثارة للعلاقة."
+  },
+  {
+    "id": 35,
+    "name": "جهاز العفة الذكوري - قفص ذكري",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889561962-IMG-20241017-WA0000.webp",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "أجهزة العفة (Chastity Devices)",
+    "description": "جهاز عفة ذكوري (قفص ذكري) مصمم ليتم ارتداؤه حول القضيب والخصيتين، يهدف إلى منع الانتصاب أو الوصول للأعضاء التناسلية. يُستخدم في سياق العلاقات الزوجية التي تتضمن التحكم (BDSM) أو لمتعة تأخير الإشباع. يأتي مع قفل ومفاتيح.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889561962-IMG-20241017-WA0000.webp"
+    ],
+    "colors": [
+      "وردي وأبيض"
+    ],
+    "sizes": [
+      "مقاسات متعددة للحلقات"
+    ],
+    "details": {
+      "النوع": "جهاز عفة ذكوري (Male Chastity Cage)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Chastity Cage Kit",
+      "المادة": "بلاستيك طبي (Resin) أو معدن (Stainless Steel)",
+      "المكونات": "قفص، حلقات أساسية (بأحجام مختلفة غالبًا)، قفل ومفاتيح",
+      "الاستخدام": "لعب الأدوار، التحكم، تأخير الإشباع (BDSM)"
+    },
+    "features": [
+      "تصميم مريح وآمن للارتداء لفترات (مع النظافة).",
+      "فتحات للتهوية والتبول.",
+      "يأتي غالبًا مع حلقات بأحجام مختلفة لاختيار المقاس المناسب.",
+      "قفل مدمج أو خارجي للأمان.",
+      "يستخدم لاستكشاف ديناميكيات القوة والتحكم."
+    ],
+    "howToUse": "1. (يتطلب بحثًا دقيقًا) اختر الحلقة الأساسية المناسبة.\n2. ارتدِ الحلقة حول قاعدة القضيب والخصيتين.\n3. ضع القضيب داخل القفص.\n4. ثبّت القفص بالحلقة وقم بالقفل. يجب الحفاظ على النظافة التامة.",
+    "benefits": "يستخدم لاستكشاف ديناميكيات القوة والتحكم بين الشريكين وتعزيز الثقة المتبادلة."
+  },
+  {
+    "id": 36,
+    "name": " قيود اليدين والفخد",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889625242-%D8%A7%D9%84%D9%81%D8%AE%D8%AF-%D9%88%D8%A7%D9%84%D9%8A%D8%AF%D9%8A%D9%86.png",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قيود وأدوات BDSM",
+    "description": "مجموعة قيود مصممة لربط اليدين بالفخذين، مما يضع المستخدم في وضعية محددة ويقيد حركته. تستخدم لزيادة الإثارة والتحكم في العلاقة الحميمة. غالبًا ما تكون مصنوعة من الجلد أو النايلون ومبطنة للراحة.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889625242-%D8%A7%D9%84%D9%81%D8%AE%D8%AF-%D9%88%D8%A7%D9%84%D9%8A%D8%AF%D9%8A%D9%86.png"
+    ],
+    "colors": [
+      "أسود"
+    ],
+    "sizes": [
+      "مقاس واحد (قابل للتعديل)"
+    ],
+    "details": {
+      "النوع": "قيود للفخذين واليدين (Thigh & Hand Cuffs)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Thigh and Wrist Restraint Set",
+      "المادة": "جلد صناعي، نايلون (مبطن بالفرو أحيانًا)",
+      "المكونات": "أصفاد لليدين (2)، أصفاد للفخذين (2)، أحزمة توصيل",
+      "الاستخدام": "تقييد الحركة، لعب الأدوار (BDSM)"
+    },
+    "features": [
+      "قابلة للتعديل لتناسب معظم المقاسات.",
+      "تربط اليدين بالفخذين لتقييد فعال ووضعية مثيرة.",
+      "مواد مريحة (مبطنة) لعدم الإيذاء.",
+      "مشبك سهل الفك (Quick-release) للأمان.",
+      "تزيد من الإثارة وتسمح باستكشاف وضعيات جديدة."
+    ],
+    "howToUse": "1. ارتدِ أصفاد الفخذين واضبط المقاس.\n2. ارتدِ أصفاد اليدين.\n3. استخدم الأحزمة لتوصيل أصفاد اليدين بأصفاد الفخذين بالوضعية المرغوبة.",
+    "benefits": "تضيف عنصر التحكم والخضوع، تزيد الإثارة وتسمح باستكشاف وضعيات جديدة."
+  },
+  {
+    "id": 37,
+    "name": " قيود السرير",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889626003-52913be60418fdb382610a10c8277f512615237e_original.jpeg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قيود وأدوات BDSM",
+    "description": "نظام قيود مصمم ليتم تثبيته تحت المرتبة. يتضمن أربعة أصفاد (لليدين والقدمين) متصلة بأحزمة قوية قابلة للتعديل. يسمح بتقييد الشريك على السرير بشكل آمن لاستكشاف المداعبة والتحكم وزيادة الإثارة.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889626003-52913be60418fdb382610a10c8277f512615237e_original.jpeg"
+    ],
+    "colors": [
+      "تركواز (Teal)"
+    ],
+    "sizes": [
+      "مقاس واحد (قابل للتعديل)"
+    ],
+    "details": {
+      "النوع": "نظام قيود للسرير (Under-Bed Restraint System)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Bed Restraint Kit",
+      "المادة": "نايلون (للأحزمة)، فرو صناعي أو جلد (للأصفاد)",
+      "المكونات": "أحزمة لتثبيتها تحت السرير، 4 أصفاد (2 لليدين، 2 للقدمين)",
+      "الاستخدام": "تقييد كامل على السرير، BDSM"
+    },
+    "features": [
+      "سهلة التركيب تحت أي مرتبة تقريبًا.",
+      "أحزمة نايلون قوية وقابلة لتعديل الطول.",
+      "أصفاد مبطنة ومريحة للمعصمين والكاحلين.",
+      "توفر تقييدًا آمنًا ومثيرًا في وضعية \"X\".",
+      "مثالية للمبتدئين في ألعاب القيود."
+    ],
+    "howToUse": "1. ضع الأحزمة الرئيسية تحت المرتبة بشكل متقاطع.\n2. اضبط طول الأحزمة الأربعة لتصل إلى زوايا السرير.\n3. ثبت الأصفاد على معصمي وقدمي الشريك.",
+    "benefits": "يحول السرير العادي إلى ساحة لعب مثيرة، مما يعزز الثقة والتحكم والمداعبة."
+  },
+  {
+    "id": 38,
+    "name": "قيود نسائية 7 قطع\nطقم قيود إثارة مكون من 7 قطع للمتزوجين",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889560938-H88860f2adcb2445d8e70da544d150b54l.webp",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مجموعات BDSM",
+    "description": "مجموعة أدوات BDSM للمبتدئين، تحتوي على 7 قطع أساسية لاستكشاف القيود والمداعبة. مثالية للأزواج الذين يرغبون في تجربة ألعاب التحكم والخضوع بطريقة آمنة وممتعة. غالبًا ما تكون مبطنة بالفرو للراحة.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889560938-H88860f2adcb2445d8e70da544d150b54l.webp"
+    ],
+    "colors": [
+      "لون لحمي"
+    ],
+    "sizes": [
+      "مقاس واحد (قابل للتعديل)"
+    ],
+    "details": {
+      "النوع": "طقم BDSM للمبتدئين (7 قطع)",
+      "العلامة التجارية": "عام",
+      "الموديل": "7-Piece BDSM Kit",
+      "المادة": "جلد صناعي مبطن بالفرو، معدن، نايلون",
+      "المكونات (نموذجية لـ 7 قطع)": "أصفاد يدين، أصفاد قدمين، طوق رقبة، عصابة عينين، مقود (Leash)، سوط صغير (Flogger) أو مضرب (Paddle)، كرة فم (Ball Gag)",
+      "الاستخدام": "لعب الأدوار، BDSM، تقييد ومداعبة"
+    },
+    "features": [
+      "مجموعة شاملة للمبتدئين لبدء الاستكشاف.",
+      "مواد ناعمة ومبطنة بالفرو للراحة والأمان.",
+      "جميع القطع قابلة للتعديل لتناسب معظم المقاسات.",
+      "تتضمن أدوات للتقييد (الأصفاد) وحجب الحواس (عصابة العين) والمداعبة (السوط).",
+      "مثالية كهدية للأزواج."
+    ],
+    "howToUse": "1. استخدم القطع بالاتفاق المتبادل والثقة.\n2. ابدأ بالقيود الخفيفة (مثل عصابة العينين) وتدرج.\n3. الأمان والتواصل هما الأولوية القصوى.",
+    "benefits": "طريقة رائعة ومنخفضة التكلفة لاستكشاف ديناميكيات التحكم والخضوع بأمان ومتعة."
+  },
+  {
+    "id": 39,
+    "name": "مهبل الكتروني - اوتوماتيك",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889561278-S36f79e880b0c4adfbc4980ea221a2941b.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "أجهزة استمناء آلية (Masturbators)",
+    "description": "جهاز استمناء ذكوري آلي (مهبل اصطناعي إلكتروني) يوفر تجربة تفاعلية. يتميز ببطانة داخلية ناعمة (Sleeve) مع اهتزازات، وأحيانًا وظائف الدفع (Thrusting) أو التسخين لمحاكاة الواقع. مصمم للمتعة الفردية بدون استخدام اليدين.",
+    "images": [
+      "https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889561278-S36f79e880b0c4adfbc4980ea221a2941b.jpg"
+    ],
+    "colors": [
+      "لون لحمي"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "جهاز استمناء آلي (Automatic Masturbator)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Automatic Electronic Masturbator",
+      "المادة": "TPE أو سيليكون (البطانة الداخلية)، بلاستيك (الهيكل)",
+      "الوظائف": "اهتزاز، دفع آلي (Thrusting)، تسخين (حسب الموديل)",
+      "مقاومة الماء": "البطانة الداخلية قابلة للغسل (الهيكل ليس مقاومًا للماء)",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "استمناء ذكوري"
+    },
+    "features": [
+      "وظائف آلية (دفع واهتزاز) لمتعة بدون مجهود.",
+      "بطانة داخلية (Sleeve) ناعمة وواقعية الملمس.",
+      "البطانة الداخلية قابلة للإزالة لسهولة التنظيف.",
+      "قد تتضمن خاصية التسخين لدفء واقعي.",
+      "أوضاع وسرعات متعددة للتحكم في التجربة."
+    ],
+    "howToUse": "1. اشحن الجهاز.\n2. تأكد من نظافة البطانة الداخلية.\n3. استخدم الكثير من المزلق المائي.\n4. أدخل القضيب وقم بتشغيل الوظائف.",
+    "benefits": "يوفر تجربة استمناء غامرة وآلية تحاكي الإحساس الواقعي مع توفير الراحة."
+  },
+  {
+    "id": 40,
+    "name": "مدلك عصا (Wand) هزاز قوي - 8 سرعات و 20 نمط - مقاوم للماء (وردي)",
+    "price": "90 د.ك",
+    "originalPrice": "120 د.ك",
+    "discount": "25%",
+    "image": "https://m.media-amazon.com/images/I/61oc095OLCL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مدلكات عصا (Wand Massagers)",
+    "description": "مدلك عصا (Wand) كلاسيكي يوفر اهتزازات قوية وعميقة. مصمم برأس مرن للوصول إلى جميع المناطق، ويقدم 8 سرعات مختلفة و 20 نمط اهتزاز. مقاوم للماء ومثالي لتدليك العضلات أو المتعة الشخصية.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61oc095OLCL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61JuuLSIXlL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61eM35A33NL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/716VDSYU5JL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "وردي"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "مدلك عصا هزاز (Wand Massager)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Classic Wand",
+      "المادة": "سيليكون (الرأس) و ABS (الجسم)",
+      "مستويات الاهتزاز": "8 سرعات + 20 نمط",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "لتحفيز البظر وتدليك العضلات",
+      "الخصوصية": "توصيل بخصوصية تامة"
+    },
+    "features": [
+      "اهتزازات قوية وعميقة.",
+      "رأس سيليكون مرن وناعم وآمن للجسم.",
+      "20 نمط اهتزاز متنوع و 8 مستويات سرعة.",
+      "مقاوم للماء بالكامل لسهولة التنظيف.",
+      "شحن مريح عبر USB."
+    ],
+    "howToUse": "1. اشحن الجهاز بالكامل.\n2. اضغط زر التشغيل لتفعيله.\n3. استخدم أزرار التحكم للتنقل بين الأنماط والسرعات.\n4. استخدمه للتدليك أو التحفيز الخارجي.",
+    "benefits": "يوفر تحفيزًا خارجيًا قويًا ومتعة مكثفة، أو تدليكًا عميقًا للعضلات."
+  },
+  {
+    "id": 41,
+    "name": "هزاز الإصبع لتحفيز البقعة G والبظر - سيليكون ناعم واهتزاز قوي",
+    "price": "40 د.ك",
+    "originalPrice": "55 د.ك",
+    "discount": "27%",
+    "image": "https://m.media-amazon.com/images/I/51MKJO81r6L._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "هزازات صغيرة (Bullet & Finger)",
+    "description": "هزاز إصبع صغير ومريح يُلبس على الإصبع، مصمم للتحفيز الدقيق للبقعة G أو البظر. يوفر اهتزازات قوية في رأس الجهاز، مما يمنحك تحكمًا كاملاً في المتعة ويجمع بين حساسية اللمس وقوة الاهتزاز.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51MKJO81r6L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/516Ux+N1sPL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51ulpqwjdaL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51fU64aHi7L._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "بنفسجي فاتح"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "هزاز إصبع (Finger Vibrator)",
+      "العلامة التجارية": "عام",
+      "الموديل": "G-Spot Finger Vibe",
+      "المادة": "سيليكون ناعم وآمن",
+      "أنماط الاهتزاز": "أنماط اهتزاز متعددة قوية",
+      "مقاومة الماء": "مقاوم للماء",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "تحفيز البقعة G والبظر"
+    },
+    "features": [
+      "تصميم مريح يُلبس بالإصبع.",
+      "تحكم دقيق ومباشر في التحفيز.",
+      "اهتزازات قوية مركزة في الرأس.",
+      "مصنوع من سيليكون ناعم وآمن على الجسم.",
+      "مثالي للعب الفردي أو الزوجي."
+    ],
+    "howToUse": "1. اشحن الجهاز قبل الاستخدام.\n2. ارتدِه على إصبعك.\n3. استخدمي مزلق مائي وابدئي التحفيز.",
+    "benefits": "يجمع بين حساسية اللمس وقوة الاهتزاز لتحفيز دقيق ومباشر."
+  },
+  {
+    "id": 42,
+    "name": "قضيب صناعي (ديلدو) هزاز واقعي - مع خاصية الدفع (Thrusting) والتسخين الذكي - 8 أوضاع",
+    "price": "33 د.ك",
+    "originalPrice": "45 د.ك",
+    "discount": "27%",
+    "image": "https://m.media-amazon.com/images/I/51ocbnmcwZL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "جديد",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قضبان صناعية هزازة (Vibrating Dildos)",
+    "description": "جهاز متطور يوفر تجربة واقعية مع خاصية الدفع (Thrusting) الآلي. يتميز بـ 8 أوضاع قوية وخاصية تسخين ذكي لمتعة إضافية ودفء واقعي. مصنوع من سيليكون واقعي مرن ومقاوم للماء.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51ocbnmcwZL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61hN4ensAOL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/516rHm0F4BL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51vKPY33IjL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51Uw7Wp5ZuL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أرجواني"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "ديلدو هزاز بخاصية الدفع والتسخين",
+      "العلامة التجارية": "عام",
+      "الموديل": "Smart Heating Thrusting Dildo",
+      "المادة": "سيليكون واقعي آمن",
+      "الوظائف": "8 أوضاع (دفع واهتزاز)، تسخين ذكي",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "لتحفيز البقعة G والإيلاج العميق"
+    },
+    "features": [
+      "حركة دفع آلية (Thrusting) لمتعة فائقة.",
+      "خاصية تسخين ذكي لواقعية أكثر.",
+      "8 أوضاع قوية ومتنوعة.",
+      "مصنوع من سيليكون مرن وناعم.",
+      "مقاوم للماء بالكامل وسهل التنظيف."
+    ],
+    "howToUse": "1. اشحن الجهاز.\n2. استخدمي مزلق مائي.\n3. اضغط زر التشغيل لتفعيل الاهتزاز أو الدفع.\n4. اضغط زر التسخين للدفء (اختياري).",
+    "benefits": "محاكاة واقعية للحركة والدفء لمتعة عميقة ومكثفة."
+  },
+  {
+    "id": 43,
+    "name": "قضيب صناعي (ديلدو) واقعي صغير - 7 إنش - بقاعدة شفط قوية (أزرق)",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/516-vpDXPpL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قضبان صناعية (Dildos)",
+    "description": "ديلدو واقعي ناعم بحجم 7 إنش، مثالي للمبتدئين. مصنوع من مادة TPE الناعمة. يتميز بقاعدة شفط قوية لتثبيته على أي سطح أملس للاستخدام بدون يدين. مناسب للعب المهبلي أو الشرجي.",
+    "images": [
+      "https://m.media-amazon.com/images/I/516-vpDXPpL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61plP-NN4RL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71dKLo2qdaL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61CqrfIbipL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أزرق"
+    ],
+    "sizes": [
+      "7 بوصة (صغير)"
+    ],
+    "details": {
+      "النوع": "قضيب صناعي (ديلدو) بقاعدة شفط",
+      "العلامة التجارية": "عام",
+      "الموديل": "Small Realistic Dildo",
+      "المادة": "TPE (مطاط حراري) ناعم",
+      "الطول": "7 بوصة",
+      "الميزات": "قاعدة شفط قوية، تصميم واقعي نحيف، بدون خصيتين",
+      "الاستخدام": "للمبتدئين، مهبلي أو شرجي"
+    },
+    "features": [
+      "حجم مثالي للمبتدئين (7 إنش).",
+      "قاعدة شفط قوية للاستخدام الحر (Hands-Free).",
+      "مادة TPE ناعمة ومرنة وآمنة للجسم.",
+      "تصميم واقعي وتفاصيل دقيقة.",
+      "سهل التنظيف."
+    ],
+    "howToUse": "1. نظف الجهاز جيدًا قبل وبعد الاستخدام.\n2. استخدم مزلق مائي.\n3. ثبت قاعدة الشفط على سطح أملس (مثل أرضية الحمام أو الحائط).",
+    "benefits": "خيار رائع وآمن للمبتدئين لتجربة المتعة مع إمكانية اللعب الحر."
+  },
+  {
+    "id": 44,
+    "name": "قضيب صناعي (ديلدو) جيلي واقعي - 8 إنش - لتحفيز البقعة G - مع قاعدة شفط",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/51thdge0SDL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قضبان صناعية (Dildos)",
+    "description": "ديلدو جيلي (Jelly) واقعي بطول 8 إنش. مصمم بانحناءة لتحفيز البقعة G. يتميز برأس واقعي وعروق بارزة وقاعدة شفط قوية للاستخدام بدون يدين. مرن وناعم للمتعة المهبلية.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51thdge0SDL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51bP5Lw9-EL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51QqP+0OT2L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61b3mySaspL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51A4wdqhTWL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "بني شوكولاتة"
+    ],
+    "sizes": [
+      "طول 8 إنش"
+    ],
+    "details": {
+      "النوع": "ديلدو جيلي واقعي بقاعدة شفط",
+      "العلامة التجارية": "عام",
+      "الموديل": "8 Inch G-spot Jelly Dildo",
+      "المادة": "جيلي (Jelly) مرن",
+      "الطول": "8 بوصة",
+      "الميزات": "قاعدة شفط قوية، انحناءة لتحفيز البقعة G، تفاصيل واقعية (عروق ورأس)",
+      "الاستخدام": "إيلاج مهبلي وتحفيز البقعة G"
+    },
+    "features": [
+      "انحناءة مثالية مصممة للوصول إلى البقعة G.",
+      "قاعدة شفط قوية للاستخدام بدون يدين.",
+      "مادة جيلي مرنة وناعمة.",
+      "تفاصيل واقعية لمزيد من الإثارة.",
+      "غير مسامي وسهل التنظيف."
+    ],
+    "howToUse": "1. استخدم مزلق مائي.\n2. ثبت القاعدة على سطح أملس.\n3. استمتعي بالانحناءة المصممة للتحفيز الداخلي.",
+    "benefits": "يجمع بين الواقعية وتحفيز البقعة G مع راحة الاستخدام الحر."
+  },
+  {
+    "id": 45,
+    "name": "سدادة شرجية بذيل ثعلب طويل (15.7 إنش) مع آذان - للعب التنكري (Cosplay) - وردي وأبيض",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/71MazyODatL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "سدادات شرجية (ذيل)",
+    "description": "طقم مثالي للعب التنكري (Cosplay) ولعب الأدوار. يتضمن سدادة شرجية معدنية مريحة متصل بها ذيل ثعلب صناعي طويل وكثيف (15.74 إنش)، بالإضافة إلى طوق آذان متطابق لإكمال المظهر.",
+    "images": [
+      "https://m.media-amazon.com/images/I/71MazyODatL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71ub3T4gZQL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/711K0MaeNfL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81kQ3PNz5ML._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71GT4VYusFL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Ghx2ty9UL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "وردي وأبيض"
+    ],
+    "sizes": [
+      "طول 15.74 إنش (الذيل)"
+    ],
+    "details": {
+      "النوع": "سدادة شرجية بذيل ثعلب + طوق آذان",
+      "العلامة التجارية": "عام",
+      "الموديل": "Fox Tail Anal Plug Set",
+      "المادة": "معدن (السدادة)، فرو صناعي (الذيل والآذان)",
+      "الطول (الذيل)": "15.74 بوصة",
+      "الاستخدام": "لعب تنكري (Cosplay)، تحفيز شرجي"
+    },
+    "features": [
+      "ذيل ثعلب طويل وكثيف لمظهر جذاب.",
+      "سدادة معدنية ناعمة ومريحة (يمكن تبريدها أو تسخينها).",
+      "يتضمن طوق آذان متطابق.",
+      "مثالي للعب الأدوار والتنكر.",
+      "قاعدة آمنة ومريحة."
+    ],
+    "howToUse": "1. استخدمي مزلق مائي مع السدادة.\n2. أدخلي السدادة برفق.\n3. ارتدِ طوق الأذنين لإكمال المظهر.",
+    "benefits": "إضافة مثيرة وممتعة للعب الأدوار والتنكر مع تحفيز ممتع."
+  },
+  {
+    "id": 46,
+    "name": "مجموعة (Tracy's Dog) للمتعة الزوجية - (Maxikit + هزاز رصاصة Bullet) - سيليكون آمن",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/61X-O-RXbxL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مجموعات وهدايا",
+    "description": "مجموعة متكاملة للمتعة الفردية أو الزوجية من Tracy's Dog. تتضمن جهاز \"Maxikit\" (مدلك كبير متعدد الاستخدامات) وهزاز \"رصاصة\" (Bullet) صغير وقوي للتحفيز الدقيق. كلاهما مصنوع من سيليكون آمن على الجسم وقابل لإعادة الشحن.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61X-O-RXbxL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/716Nr0P5KkL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71HbWfIx7TL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/613r92l4drL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61JuEfJQkhL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أسود"
+    ],
+    "sizes": [
+      "مجموعة من قطعتين"
+    ],
+    "details": {
+      "النوع": "مجموعة هدايا (مدلك كبير + هزاز صغير)",
+      "العلامة التجارية": "Tracy's Dog",
+      "الموديل": "Date Night Vibrator Bundle",
+      "المادة": "سيليكون آمن على الجسم",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "كلاهما قابل لإعادة الشحن عبر USB",
+      "الاستخدام": "للمتعة الفردية واللعب الزوجي"
+    },
+    "features": [
+      "مجموعة 2 في 1 (جهاز كبير وجهاز صغير).",
+      "مصنوعة بالكامل من سيليكون آمن على الجسم.",
+      "مقاومة كاملة للماء للاستخدام في الحمام.",
+      "كلا الجهازين قابل لإعادة الشحن.",
+      "مثالية كهدية للأزواج."
+    ],
+    "howToUse": "1. اشحن الجهازين.\n2. استخدم المزلق.\n3. استخدم الهزاز الصغير (Bullet) للتحفيز الدقيق للبظر والحلمات، والجهاز الأكبر للتدليك الشامل أو الإيلاج.",
+    "benefits": "مجموعة متكاملة توفر خيارات متنوعة للتحفيز الخارجي والداخلي."
+  },
+  {
+    "id": 47,
+    "name": "جهاز محاكاة اللسان (Fierce Flicker) من Evolved - لتحفيز البظر - لون (Teal)",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/61LDokEj0DL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مُحفزات البظر (محاكاة اللسان)",
+    "description": "جهاز \"Fierce Flicker\" من Evolved مصمم خصيصًا لمحاكاة حركة اللسان (Flickering) لتحفيز البظر بشكل فريد ومكثف. يتميز برأس سيليكون ناعم وسريع الحركة لمتعة لا مثيل لها تختلف عن الاهتزاز التقليدي.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61LDokEj0DL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/813sNXbBDTL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71E6WUouHUL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/716uEqKph2L._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "تركواز (Teal)"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "محفز بظر بحركة اللسان (Flickering)",
+      "العلامة التجارية": "Evolved",
+      "الموديل": "Fierce Flicker",
+      "المادة": "سيليكون آمن",
+      "الوظائف": "أوضاع حركة \"لعق\" متعددة السرعات",
+      "مقاومة الماء": "مقاوم للماء",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "لتحفيز البظر"
+    },
+    "features": [
+      "يحاكي حركة اللسان (Flickering/Licking) بدقة.",
+      "رأس سيليكون ناعم ودقيق لاستهداف البظر.",
+      "أوضاع سرعة متعددة لتجربة متدرجة.",
+      "تصميم مريح لليد وسهل التحكم.",
+      "قابل لإعادة الشحن ومقاوم للماء."
+    ],
+    "howToUse": "1. اشحن الجهاز.\n2. ضعي الرأس المتحرك مباشرة على البظر.\n3. اختاري السرعة والنمط المناسب.",
+    "benefits": "يوفر نوعًا فريدًا من التحفيز (اللعق) يختلف عن الاهتزاز التقليدي."
+  },
+  {
+    "id": 48,
+    "name": "طقم (ديلدو واقعي للمبتدئين + حزام مجوف Strap-On)",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/61kACGLfMDL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "أحزمة ومتعلقاتها (Strap-Ons)",
+    "description": "مجموعة لعب 2 في 1: تتضمن قضيبًا صناعيًا (ديلدو) واقعيًا بحجم مناسب للمبتدئين، وحزام (Strap-On) مجوف يمكن ارتداؤه. مثالي للأزواج الذين يستكشفون اللعب بالحزام أو للنساء اللاتي يردن تجربة الإيلاج.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61kACGLfMDL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61+NBrcL6qL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71ZSe0rMMML._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51Rk8jGf7HL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "لون لحمي"
+    ],
+    "sizes": [
+      "مقاس واحد (قابل للتعديل)"
+    ],
+    "details": {
+      "النوع": "طقم ديلدو + حزام مجوف",
+      "العلامة التجارية": "عام",
+      "الموديل": "Beginner Dildo + Hollow Strap-On",
+      "المادة": "سيليكون/TPE",
+      "الميزات": "ديلدو واقعي، حزام مجوف (Hollow Strap-On) قابل للتعديل",
+      "الاستخدام": "للمبتدئين في اللعب بالحزام، لعب زوجي"
+    },
+    "features": [
+      "مجموعة 2 في 1 (ديلدو منفصل وحزام).",
+      "تصميم مجوف (Hollow) لراحة الرجل عند الارتداء.",
+      "ديلدو بحجم مناسب للمبتدئين.",
+      "حزام قابل للتعديل ليناسب مختلف المقاسات.",
+      "يسمح بتجربة الإيلاج المزدوج أو لعب الأدوار."
+    ],
+    "howToUse": "1. يمكن استخدام الديلدو بمفرده.\n2. يمكن ارتداء الحزام المجوف (مع أو بدون الديلدو) للعب الزوجي.",
+    "benefits": "يوفر خيارات متعددة للعب الزوجي واستكشاف أدوار جديدة."
+  },
+  {
+    "id": 49,
+    "name": "مجموعة (ديلدو واقعي عملاق 17.9 إنش + ديلدو جيلي 12.6 إنش)",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/51OOqn3JTWL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قضبان صناعية (Dildos)",
+    "description": "مجموعة للمحترفين فقط: تتضمن قطعتين بأحجام كبيرة جدًا. ديلدو واقعي فائق الطول (17.9 إنش) وديلدو جيلي واقعي (12.6 إنش). كلاهما مصمم لإحساس الإشباع العميق واللعب المتقدم.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51OOqn3JTWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61W-Z8UDviL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51TTKhdsHWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61lKtUK447L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61-Wvd1hhVL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "لون لحمي"
+    ],
+    "sizes": [
+      "كبير (12.6 إنش)",
+      "عملاق (17.9 إنش)"
+    ],
+    "details": {
+      "النوع": "مجموعة قضبان صناعية (Dildos) كبيرة",
+      "العلامة التجارية": "عام",
+      "الموديل": "Super Long Dildo Set",
+      "القطع": "1 (17.9 بوصة) + 1 (12.6 بوصة)",
+      "المادة": "TPE/سيليكون و جيلي",
+      "الميزات": "أحجام كبيرة جدًا، واقعية الملمس والشكل",
+      "الاستخدام": "للمستخدمين المتقدمين، إشباع عميق"
+    },
+    "features": [
+      "أحجام عملاقة (17.9 و 12.6 إنش).",
+      "تفاصيل واقعية (عروق ورأس) لزيادة الإثارة.",
+      "مواد مرنة وآمنة للجسم.",
+      "غير مناسب للمبتدئين.",
+      "قواعد شفط قوية (حسب الصور)."
+    ],
+    "howToUse": "1. (تحذير) يتطلب الكثير من المزلق والاسترخاء التام.\n2. لا يُنصح به للمبتدئين إطلاقًا.\n3. استخدم قاعدة الشفط للتثبيت.",
+    "benefits": "لإشباع عميق للغاية وتجربة فريدة بفضل الأحجام الكبيرة جدًا."
+  },
+
+  {
+    "id": 50,
+    "name": "طقم سدادة شرجية على شكل قلب + قضيب (ديلدو) واقعي على شكل مجس 8.7 إنش",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/61SVn5KSMIL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة",
+      "خصم",
+      "توصيل سريع"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مجموعات شرجية وغريبة",
+    "description": "مجموعة لعب مثيرة: تتكون من سدادة شرجية بقاعدة على شكل **قلب** لارتداء مريح وآمن، بالإضافة إلى قضيب صناعي (ديلدو) واقعي وغريب بتصميم **المجس** (Tentacle) بطول 8.7 إنش. هذه المجموعة توفر تجارب لعب متنوعة ومثيرة.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61SVn5KSMIL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/615oWeo+RoL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71KYO4gWL3L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71SmM9QzpoL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أرجواني وأسود"
+    ],
+    "sizes": [
+      "مقاس واحد (مجموعة)"
+    ],
+    "details": {
+      "النوع": "مجموعة لعب (سدادة وديلدو مجس)",
+      "العلامة التجارية": "عام",
+      "الموديل": "Heart Plug + Tentacle Dildo",
+      "المادة": "سيليكون آمن على الجسم",
+      "الطول (الديلدو)": "8.7 بوصة",
+      "الميزات": "سدادة بقاعدة قلب، ديلدو بتصميم مجس لتحفيز داخلي مختلف.",
+      "الاستخدام": "لعب شرجي وغريب (Fetish Play)"
+    },
+    "features": [
+      "تصميم المجس يوفر إحساسًا بالتحفيز الفريد.",
+      "سدادة شرجية بقاعدة على شكل قلب لارتداء آمن.",
+      "مصنوعة من سيليكون ناعم آمن وسهل التنظيف.",
+      "مقاومة للماء بالكامل."
+    ],
+    "howToUse": "1. استخدمي مزلق مائي.\n2. يمكن استخدام القطعتين في أوقات مختلفة لتجربة أنواع مختلفة من الإثارة.",
+    "benefits": "مجموعة متكاملة لاستكشاف المتعة الشرجية واللعب الغريب."
+  }
+
+        ];
+
+        // متغيرات نظام السلة
+        let cart = [];
+
+        // دالة لتحميل السلة من localStorage - تم تغيير المفتاح إلى "hmsaCart"
+        function loadCartFromLocalStorage() {
+            const savedCart = localStorage.getItem('hmsaCart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+                updateCartCount();
+            }
+        }
+
+        // دالة لحفظ السلة إلى localStorage - تم تغيير المفتاح إلى "hmsaCart"
+        function saveCartToLocalStorage() {
+            localStorage.setItem('hmsaCart', JSON.stringify(cart));
+        }
+
+        // دالة لتحديث عداد السلة
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            const floatingCartCount = document.querySelector('.floating-cart-count');
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            floatingCartCount.textContent = totalItems;
+        }
+
+        // دالة لإضافة منتج إلى السلة
+        function addToCart(productId, color = null, size = null) {
+            let product = products.find(p => p.id == productId);
+            
+            if (product) {
+                const existingItemIndex = cart.findIndex(item => 
+                    item.id === productId && 
+                    item.selectedColor === color && 
+                    item.selectedSize === size
+                );
+                
+                if (existingItemIndex > -1) {
+                    cart[existingItemIndex].quantity += 1;
+                } else {
+                    cart.push({
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        image: product.image,
+                        quantity: 1,
+                        selectedColor: color,
+                        selectedSize: size
+                    });
+                }
+                
+                saveCartToLocalStorage();
+                updateCartCount();
+            }
+        }
+
+        // دالة لعرض المنتجات
+        function renderProducts(productsArray, containerId) {
+            const productsContainer = document.getElementById(containerId);
+            productsContainer.innerHTML = '';
+            
+            productsArray.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.setAttribute('data-id', product.id);
+                
+                let badgesHtml = '';
+                if (product.badges && product.badges.length > 0) {
+                    badgesHtml = '<div class="product-badges">';
+                    product.badges.forEach(badge => {
+                        switch(badge) {
+                            case 'discount':
+                                badgesHtml += '<span class="badge badge-discount">خصم</span>';
+                                break;
+                            case 'new':
+                                badgesHtml += '<span class="badge badge-new">جديد</span>';
+                                break;
+                            case 'exclusive':
+                                badgesHtml += '<span class="badge badge-exclusive">حصري</span>';
+                                break;
+                            // تم تغيير نص الشارة ليطابق "همسة"
+                            case 'fast-delivery':
+                                badgesHtml += '<span class="badge badge-fast-delivery">توصيل سريع</span>';
+                                break;
+                            // تم إضافة شارة "همسة"
+                            case 'confidential':
+                                badgesHtml += '<span class="badge badge-confidential">توصيل بسرية تامة</span>';
+                                break;
+                        }
+                    });
+                    badgesHtml += '</div>';
+                }
+                
+                let priceHtml = `<p class="product-price">${product.price}`;
+                if (product.originalPrice) {
+                    priceHtml += ` <span class="original-price">${product.originalPrice}</span>`;
+                }
+                priceHtml += '</p>';
+                
+                productCard.innerHTML = `
+                    ${badgesHtml}
+                    <div class="product-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        ${priceHtml}
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="${product.id}">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+        // دالة لعرض صفحة المنتج
+        function showProductPage(productId) {
+            let product = products.find(p => p.id == productId);
+            
+            if (product) {
+                document.querySelectorAll('.products-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById('product-page').style.display = 'block';
+                
+                let priceHtml = `<p class="product-price-detail">${product.price}`;
+                if (product.originalPrice) {
+                    priceHtml += ` <span class="original-price">${product.originalPrice}</span>`;
+                }
+                priceHtml += '</p>';
+                
+                let badgesHtml = '';
+                if (product.badges && product.badges.length > 0) {
+                    badgesHtml = '<div class="product-badges">';
+                    product.badges.forEach(badge => {
+                        switch(badge) {
+                            case 'discount':
+                                badgesHtml += '<span class="badge badge-discount">خصم</span>';
+                                break;
+                            case 'new':
+                                badgesHtml += '<span class="badge badge-new">جديد</span>';
+                                break;
+                            case 'exclusive':
+                                badgesHtml += '<span class="badge badge-exclusive">حصري</span>';
+                                break;
+                            case 'fast-delivery':
+                                badgesHtml += '<span class="badge badge-fast-delivery">توصيل سريع</span>';
+                                break;
+                            case 'confidential':
+                                badgesHtml += '<span class="badge badge-confidential">توصيل بسرية تامة</span>';
+                                break;
+                        }
+                    });
+                    badgesHtml += '</div>';
+                }
+                
+                let thumbnailsHtml = '';
+                if (product.images && product.images.length > 0) {
+                    product.images.forEach((img, index) => {
+                        thumbnailsHtml += `<img src="${img}" alt="${product.name}" class="product-thumbnail ${index === 0 ? 'active' : ''}" data-image="${img}">`;
+                    });
+                }
+                
+                let colorsHtml = '';
+                if (product.colors && product.colors.length > 0) {
+                    colorsHtml = `
+                        <div class="product-options">
+                            <span class="option-title">اللون:</span>
+                            <div class="option-values">
+                                ${product.colors.map((color, index) => `
+                                    <span class="option-value ${index === 0 ? 'selected' : ''}" data-value="${color}">${color}</span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                let sizesHtml = '';
+                if (product.sizes && product.sizes.length > 0) {
+                    sizesHtml = `
+                        <div class="product-options">
+                            <span class="option-title">الحجم:</span>
+                            <div class="option-values">
+                                ${product.sizes.map((size, index) => `
+                                    <span class="option-value ${index === 0 ? 'selected' : ''}" data-value="${size}">${size}</span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                let detailsHtml = '';
+                if (product.details) {
+                    detailsHtml = `
+                        <h3>تفاصيل المنتج</h3>
+                        <table class="product-table">
+                            <tbody>
+                                ${Object.entries(product.details).map(([key, value]) => `
+                                    <tr>
+                                        <th>${key}</th>
+                                        <td>${value}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    `;
+                }
+                
+                document.getElementById('product-details').innerHTML = `
+                    <div class="product-gallery">
+                        ${badgesHtml}
+                        <img src="${product.images ? product.images[0] : product.image}" alt="${product.name}" class="main-product-image" id="main-product-image">
+                        <div class="product-thumbnails">
+                            ${thumbnailsHtml}
+                        </div>
+                    </div>
+                    <div class="product-info-detail">
+                        <h2 class="product-title-detail">${product.name}</h2>
+                        ${priceHtml}
+                        <p class="product-description">${product.description}</p>
+                        
+                        ${colorsHtml}
+                        ${sizesHtml}
+                        
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="${product.id}" id="add-to-cart-detail">أضف إلى السلة</button>
+                        </div>
+                        
+                        ${detailsHtml}
+                    </div>
+                `;
+                
+                document.querySelectorAll('.product-thumbnail').forEach(thumb => {
+                    thumb.addEventListener('click', function() {
+                        document.getElementById('main-product-image').src = this.getAttribute('data-image');
+                        document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+                
+                document.querySelectorAll('.option-value').forEach(option => {
+                    option.addEventListener('click', function() {
+                        this.parentElement.querySelectorAll('.option-value').forEach(o => o.classList.remove('selected'));
+                        this.classList.add('selected');
+                    });
+                });
+                
+                document.getElementById('add-to-cart-detail').addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    const selectedColor = document.querySelector('.product-options .option-value.selected[data-value]')?.getAttribute('data-value') || (product.colors ? product.colors[0] : null);
+                    const selectedSize = document.querySelector('.product-options .option-value.selected[data-value]')?.getAttribute('data-value') || (product.sizes ? product.sizes[0] : null);
+                    addToCart(product.id, selectedColor, selectedSize);
+                });                
+                
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        }
+
+        // دالة للعودة إلى قائمة المنتجات
+        function backToProducts() {
+            document.querySelectorAll('.products-section').forEach(section => {
+                section.style.display = 'block';
+            });
+            document.getElementById('product-page').style.display = 'none';
+            document.getElementById('products-section').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // دالة لإظهار/إخفاء القائمة على الهواتف
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // تهيئة الصفحة عند التحميل
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCartFromLocalStorage();
+            renderProducts(products, 'featured-products');
+            
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('add-to-cart')) {
+                    const productId = e.target.getAttribute('data-id');
+                    addToCart(productId);
+                    e.stopPropagation();
+                }
+            });
+            
+            document.addEventListener('click', function(e) {
+                const productCard = e.target.closest('.product-card');
+                if (productCard) {
+                    const productId = productCard.getAttribute('data-id');
+                    showProductPage(productId);
+                }
+            });
+            
+            document.getElementById('back-to-products').addEventListener('click', backToProducts);
+            
+            document.getElementById('floating-cart').addEventListener('click', function() {
+                 window.location.href = 'sk.html'; // تم تعديل الرابط لصفحة السلة
+            });
+            
+            document.getElementById('cart-icon').addEventListener('click', function(e) {
+                e.preventDefault();
+                 window.location.href = 'sk.html'; // تم تعديل الرابط لصفحة السلة
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همسة - منتجات حميمية بأمان وخصوصية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1F3A3D;
+            --secondary-color: #8EA6A3;
+            --neutral-color: #F2F5F4;
+            --button-color: #1F3A3D;
+            --text-color: #4A4A4A;
+            --light-text: #ffffff;
+            --dark-text: #1F3A3D;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --discount-color: #8EA6A3;
+            --exclusive-color: #1F3A3D;
+            --new-color: #8EA6A3;
+            --fast-delivery: #1F3A3D;
+            --confidential-color: #8EA6A3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: var(--dark-text);
+            direction: rtl;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* الهيدر */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: #f8f8f8;
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .header-top-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-top-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-main-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--button-color);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--button-color);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-icon {
+            font-size: 1.2rem;
+            color: var(--dark-text);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .header-icon:hover {
+            color: var(--button-color);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            background-color: var(--button-color);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-btn {
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .login-btn:hover {
+            background-color: #152a2c;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* قسم البطل */
+        .hero {
+            background: linear-gradient(to left, rgba(31, 58, 61, 0.7), rgba(31, 58, 61, 0.7)), url('https://intimate.ie/wp-content/uploads/2016/05/male-and-female-mannequins-on-black-background-2023-11-27-05-05-06-utc-scaled.jpg') center/cover no-repeat;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background-color: #152a2c;
+            transform: translateY(-2px);
+        }
+
+        /* شريط التصنيفات */
+        .categories-section {
+            padding: 40px 0;
+            background-color: white;
+        }
+
+        .categories-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--dark-text);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .categories-scroll {
+            overflow-x: auto;
+            padding: 10px 0 30px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) #f1f1f1;
+        }
+
+        .categories-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .categories-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .categories-scroll::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .categories-container {
+            display: flex;
+            gap: 25px;
+            padding: 10px 5px;
+            min-width: max-content;
+        }
+
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 90px;
+            transition: var(--transition);
+        }
+
+        .category-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .category-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .category-name {
+            font-size: 0.9rem;
+            text-align: center;
+            color: var(--dark-text);
+            font-weight: 500;
+        }
+
+        .category-item:hover .category-circle {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-item:hover .category-circle img {
+            transform: scale(1.1);
+        }
+
+        .category-item:hover .category-name {
+            color: var(--button-color);
+        }
+
+        /* قسم المنتجات */
+        .products-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--dark-text);
+            position: relative;
+            padding-bottom: 15px;
+            font-family: 'Cairo', sans-serif;
+        }
+
+         .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--button-color);
+        }
+
+        /* ======== Product Card Styles (from pro.1.html) ======== */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image-container {
+            height: 180px; 
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px; 
+        }
+
+        .product-image {
+            max-width: 90%; 
+            max-height: 90%; 
+            object-fit: contain; 
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-text);
+            min-height: 2.4rem; /* Ensures title area is at least 2 lines high */
+        }
+
+        .product-price {
+            color: var(--button-color);
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.8rem;
+            margin-left: 6px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: auto; /* This pushes the button to the bottom */
+        }
+
+        .add-to-cart {
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            width: 100%;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .add-to-cart:hover {
+            background-color: #152a2c; 
+        }
+
+        /* علامات المنتجات */
+        .product-badges {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            z-index: 10;
+        }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .badge-discount {
+            background-color: var(--discount-color);
+        }
+
+        .badge-new {
+            background-color: var(--new-color);
+        }
+
+        .badge-exclusive {
+            background-color: var(--exclusive-color);
+        }
+
+        .badge-fast-delivery {
+            background-color: var(--fast-delivery);
+            color: white;
+        }
+
+        .badge-confidential {
+            background-color: var(--confidential-color);
+            color: white;
+        }
+
+        /* قسم الاشتراك */
+        .subscription-section {
+            background-color: var(--secondary-color);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .subscription-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: var(--box-shadow);
+        }
+
+        .subscription-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark-text);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .subscription-card p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .subscribe-btn {
+            background-color: var(--button-color);
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .subscribe-btn:hover {
+            background-color: #152a2c;
+            transform: translateY(-2px);
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #2c2c2c;
+            color: #f1f1f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: white;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .footer-column h4::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--button-color);
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #444;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--button-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* صفحة المنتج */
+        .product-page {
+            display: none;
+            padding: 40px 0;
+            background-color: white;
+        }
+
+        .product-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .product-gallery {
+            position: relative;
+        }
+
+        .main-product-image {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 15px;
+        }
+
+        .product-thumbnails {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .product-thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .product-thumbnail:hover, .product-thumbnail.active {
+            border-color: var(--button-color);
+        }
+
+        .product-info-detail {
+            padding: 20px 0;
+        }
+
+        .product-title-detail {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .product-price-detail {
+            font-size: 1.8rem;
+            color: var(--button-color);
+            margin-bottom: 20px;
+        }
+
+        .product-description {
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .product-options {
+            margin-bottom: 25px;
+        }
+
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .option-values {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .option-value {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .option-value:hover, .option-value.selected {
+            background-color: var(--button-color);
+            color: white;
+            border-color: var(--button-color);
+        }
+
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        .product-table th, .product-table td {
+            padding: 12px 15px;
+            text-align: right;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-table th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+        }
+
+        .product-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .back-to-products {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .back-to-products:hover {
+            background-color: #7a9591;
+        }
+        
+        /* ======== NEW: Floating Cart Styles ======== */
+        .floating-cart {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: var(--button-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .floating-cart:hover {
+            transform: scale(1.1);
+        }
+        
+        .floating-cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        /* ======== End Floating Cart Styles ======== */
+
+
+        /* ===== التجاوب مع الشاشات المختلفة ===== */
+        @media (max-width: 992px) {
+            .nav-menu {
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .categories-container {
+                gap: 20px;
+            }
+            
+            .category-circle {
+                width: 70px;
+                height: 70px;
+            }
+
+            .product-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: white;
+                width: 100%;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            /* Updated product grid styles */
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 15px; 
+            }
+            .product-image-container {
+                height: 160px;
+            }
+            .product-actions {
+                flex-direction: column;
+            }
+            /* End updated styles */
+            
+            .categories-title {
+                font-size: 1.6rem;
+            }
+            
+            .categories-container {
+                gap: 15px;
+            }
+            
+            .category-circle {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .category-name {
+                font-size: 0.8rem;
+            }
+            
+            .product-thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+
+            .floating-cart {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                left: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-main-container {
+                flex-wrap: wrap;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            /* ======== التعديلات المطلوبة (فراغات + عناوين) ======== */
+            .hero {
+                padding: 50px 0; 
+            }
+
+            .products-section {
+                padding: 40px 0; 
+            }
+            
+            .subscription-section {
+                padding: 50px 0;
+            }
+
+            footer {
+                padding-top: 40px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem; 
+            }
+            
+            .section-title {
+                font-size: 1.5rem; 
+                margin-bottom: 30px; 
+            }
+
+            .categories-title {
+                font-size: 1.5rem; 
+                margin-bottom: 25px;
+            }
+            
+            .subscription-card h3 {
+                font-size: 1.5rem; 
+            }
+
+            .product-title-detail {
+                font-size: 1.6rem; 
+            }
+
+            /* Updated product card styles for mobile */
+            .products-grid {
+                gap: 12px;
+            }
+            .product-image-container {
+                height: 140px;
+            }
+            .product-info {
+                padding: 12px;
+            }
+            .product-title {
+                font-size: 0.9rem;
+                line-height: 1.4;
+                margin-bottom: 8px;
+                min-height: 2.2rem;
+            }
+            .product-price {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            .add-to-cart {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+            }
+            /* ======== نهاية التعديلات ======== */
+            
+            .subscription-card {
+                padding: 25px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-column h4::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .categories-section {
+                padding: 30px 0;
+            }
+            
+            .categories-container {
+                gap: 12px;
+            }
+            
+            .category-circle {
+                width: 55px;
+                height: 55px;
+            }
+            
+            .category-name {
+                font-size: 0.75rem;
+            }
+
+            .product-thumbnail {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .floating-cart {
+                width: 45px;
+                height: 45px;
+                bottom: 10px;
+                left: 10px;
+            }
+            
+            .floating-cart-count {
+                width: 20px;
+                height: 20px;
+                font-size: 0.7rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .products-grid {
+                gap: 10px;
+            }
+            
+            .product-image-container {
+                height: 120px;
+            }
+            
+            .product-title {
+                font-size: 0.85rem;
+                min-height: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+        
+        <div class="container header-main-container">
+            <div class="logo">همسة</div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="pro.1.html">الأدوات</a></li>
+                <li><a href="pro.1.html">الرفاهية الخاصة</a></li>
+                <li><a href="pro.1.html">أقل من 99 ريال</a></li>
+                <li><a href="#">الاشتراك</a></li>
+                <li><a href="pro.1.html">عروض وباقات</a></li>
+                <li><a href="#">مدونة العناية</a></li>
+                <li><a href="#">تواصل معنا</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="#" class="header-icon">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="index.html" class="header-icon">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a href="sk.html" class="header-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="login-btn" onclick="window.location.href='log.html'">تسجيل دخول</button>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>منتجات حميمية بأمان وخصوصية</h1>
+                <p>اكتشفوا تشكيلتنا الحصرية من المنتجات الحميمية للرجال والنساء بتصميم راقٍ وجودة عالية</p>
+                <button class="cta-btn" onclick="window.location.href='التصنيفات.html'">اكتشف الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section" id="categories-section">
+        <div class="container">
+            <h2 class="categories-title">تسوقوا الحين</h2>
+            <div class="categories-scroll">
+                <div class="categories-container">
+                    <a href="pro.1.html" class="category-item">
+                        <div class="category-circle">
+                            <img src="https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889562588-2000_63ca45dd08d42.webp" alt="أدوات نسائية">
+                        </div>
+                        <span class="category-name">أدوات نسائية</span>
+                    </a>
+                    
+                    <a href="pro.2.html" class="category-item">
+                        <div class="category-circle">
+                            <img src="https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889625242-%D8%A7%D9%84%D9%81%D8%AE%D8%AF-%D9%88%D8%A7%D9%84%D9%8A%D8%AF%D9%8A%D9%86.png" alt="أدوات رجالية">
+                        </div>
+                        <span class="category-name">أدوات رجالية</span>
+                    </a>
+                    
+                    
+       
+                    
+                    
+                    
+                    
+                    <a href="pro.3.html" class="category-item">
+                        <div class="category-circle">
+                            <img src="https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889675675-2000_5da8fbc649854.webp" alt="منتجات سيلكون طبي">
+                        </div>
+                        <span class="category-name">سيلكون طبي</span>
+                    </a>
+                    
+                    
+                    
+                    <a href="pro.1.html" class="category-item">
+                        <div class="category-circle">
+                            <img src="https://cdn.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=scale-down/cdn-ecommerce/store_01JBY6AS9Y2HZF33YZZ76D55SN%2Fassets%2F1730889675811-analplug-nocolour-nosize-2008827-detail-.jpg" alt="منتجات سفر">
+                        </div>
+                        <span class="category-name">منتجات سفر</span>
+                    </a>
+                    
+                    <a href="pro.1.html" class="category-item">
+                        <div class="category-circle">
+                            <img src="https://m.media-amazon.com/images/I/61X-O-RXbxL._AC_SL1500_.jpg" alt="منتجات جديدة">
+                        </div>
+                        <span class="category-name">منتجات جديدة</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="products-section">
+        <div class="container">
+            <h2 class="section-title">منتجاتنا المميزة</h2>
+            <div class="products-grid" id="featured-products">
+                </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">عروض خاصة</h2>
+            <div class="products-grid" id="under-99-products">
+                </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">منتجات زوجية</h2>
+            <div class="products-grid" id="perfume-products">
+                </div>
+        </div>
+    </section>
+
+    <section class="product-page" id="product-page">
+        <div class="container">
+            <button class="back-to-products" id="back-to-products">← العودة إلى المنتجات</button>
+            
+            <div class="product-details" id="product-details">
+                </div>
+        </div>
+    </section>
+
+    <section class="subscription-section">
+        <div class="container">
+            <div class="subscription-card">
+                <h3>اشتراك شهري حصري</h3>
+                <p>احصل على صندوق شهري يحتوي على 2-3 منتجات مختارة خصيصاً لك مع خصم يصل إلى 40% وتوصيل سري ومستتر</p>
+                <button class="subscribe-btn">اشترك الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+          <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>عن المتجر</h4>
+                    <p>متجرنا يقدم أجود المنتجات الحميمية للرجال والنساء مع ضمان الجودة والخصوصية والخدمة المتميزة.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">تتبع الطلب</a></li>
+                        <li><a href="#">الاشتراك</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>المساعدة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">طرق الدفع</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>القائمة البريدية</h4>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر العروض والأخبار</p>
+                    <form>
+                        <input type="email" placeholder="بريدك الإلكتروني" style="padding: 10px; width: 100%; margin-bottom: 10px; border-radius: var(--border-radius); border: none;">
+                        <button type="submit" class="subscribe-btn" style="width: 100%; padding: 10px;">اشتراك</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 همسة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-cart" id="floating-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="floating-cart-count">0</span>
+    </div>
+    <script>
+        const products = [
+  {
+    "id": 1,
+    "name": "جهاز Satisfyer Pro 2 الهزاز - بتقنية الموجات الضاغطة والشفط للمتعة القصوى",
+    "price": "90 د.ك",
+    "originalPrice": "120 د.ك",
+    "discount": "25%",
+    "image": "https://m.media-amazon.com/images/I/517SgUUY+9L._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة"
+        ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مُحفزات البظر بالشفط",
+    "description": "تجربة لا تُنسى: جهاز Satisfyer الأيقوني، المفضل عالميًا، يجمع بين الموجات الضاغطة وتقنية Airpulse الثورية لتحفيز البظر والوصول إلى النشوة بشكل لم يسبق له مثيل. يتميز بتصميم مريح و11 مستوى مختلف من شدة الموجات الضاغطة.",
+    "images": [
+      "https://m.media-amazon.com/images/I/517SgUUY+9L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51BWc59R0pL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51CtYUH0veL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61LnkAchIbL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "وردي فاتح"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "مُحفز بظر بتقنية الموجات الضاغطة",
+      "العلامة التجارية": "Satisfyer",
+      "الموديل": "Pro 2",
+      "المادة": "سيليكون آمن على الجلد (Skin-friendly Silicone)",
+      "مستويات الاهتزاز": "11 مستوى لشدة الموجات",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "لتحفيز البظر والمتعة الأنثوية",
+      "الخصوصية": "توصيل بخصوصية تامة"
+    },
+    "features": [
+      "تقنية Airpulse لتحفيز دقيق ومكثف.",
+      "مقاوم للماء بالكامل وسهل التنظيف.",
+      "11 إعدادًا مختلفًا لشدة الموجات.",
+      "مصنوع من سيليكون ناعم وآمن على الجسم.",
+      "شحن مغناطيسي سريع عبر USB."
+    ],
+    "howToUse": "1. اشحني الجهاز بالكامل.\n2. ضعي فوهة الجهاز على البظر مباشرة دون تلامس.\n3. استخدمي أزرار (+) و (-) لاختيار مستوى الشدة المناسب.",
+    "benefits": "نشوة مكثفة ومختلفة عن الاهتزاز التقليدي بفضل تقنية الموجات الضاغطة."
+  },
+  {
+    "id": 2,
+    "name": "كرات شرجية و سدادة هزازة - سيليكون قابلة لإعادة الشحن للرجال والنساء",
+    "price": "40 د.ك",
+    "originalPrice": "55 د.ك",
+    "discount": "27%",
+    "image": "https://m.media-amazon.com/images/I/51rdwMwXafL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة"
+    ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "سدادات وكرات شرجية هزازة",
+    "description": "تصميم فريد للمبتدئين: يمكن استخدام هذا الجهاز الهزاز كمدلك للبروستاتا أو سدادة شرجية أو محفز للبقعة G. يتميز بخرز متدرج يجعله مثاليًا ومناسبًا لمعظم المقاسات، مما يوفر متعة شرجية رائعة سواء كنت مبتدئًا أو متوسط الخبرة. يوفر أنماط اهتزاز متعددة وقوية.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51rdwMwXafL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51UAZ0dbVWL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51Gi0RhCErL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51690LSz3fL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "بنفسجي فاتح"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "سدادة وكرات شرجية هزازة",
+      "العلامة التجارية": "عام",
+      "الموديل": "خرز شرجي هزاز",
+      "المادة": "سيليكون ناعم وآمن",
+      "أنماط الاهتزاز": "متعددة السرعات والترددات",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "إعادة شحن عبر USB (3 ساعات لشحن كامل)",
+      "الاستخدام": "للتحفيز الشرجي والبروستاتا والبقعة G"
+    },
+    "features": [
+      "تصميم متدرج مثالي للمبتدئين.",
+      "اهتزازات قوية ومتعددة الترددات.",
+      "مصنوع من سيليكون ناعم وآمن على الجسم.",
+      "قابلة لإعادة الشحن للاستخدام المتنقل.",
+      "تغليف سري (Discreet Packaging) لخصوصيتك."
+    ],
+    "howToUse": "1. اشحني الجهاز قبل الاستخدام.\n2. استخدمي مزلق مائي.\n3. ابدئي بأدنى مستوى اهتزاز وزيدي الشدة تدريجياً.",
+    "benefits": "تجربة متعة شرجية مريحة ومحفزة بفضل التصميم المبتكر والاهتزاز القوي."
+  },
+  {
+    "id": 3,
+    "name": "جهاز هزاز (الأرنب المزدوج) من plusOne - محرك مزدوج بـ 10 إعدادات اهتزاز",
+    "price": "33 د.ك",
+    "originalPrice": "45 د.ك",
+    "discount": "27%",
+    "image": "https://m.media-amazon.com/images/I/51q4z8qwpdL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة"
+        ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "اهتزاز داخلي وخارجي (الأرنب)",
+    "description": "متعة مضاعفة: يتميز هذا الهزاز ثنائي المحرك، ورأسين يهتزان بشكل مستقل، و10 خيارات اهتزاز، مما يوفر تحفيزًا داخليًا وخارجيًا في وقت واحد. مثالي للعب الفردي أو مع الشريك. مصنوع من سيليكون آمن على الجسم ومقاوم للماء بالكامل.",
+    "images": [
+      "https://m.media-amazon.com/images/I/51q4z8qwpdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71BI6kPwSsL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/7156ISgJARL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/715krm7eS3L._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أرجواني"
+    ],
+    "sizes": [
+      "مقاس واحد"
+    ],
+    "details": {
+      "النوع": "هزاز داخلي وخارجي (الأرنب المزدوج)",
+      "العلامة التجارية": "plusOne",
+      "الموديل": "Dual Rabbit Vibrator",
+      "المادة": "سيليكون آمن على الجسم",
+      "أنماط الاهتزاز": "10 إعدادات اهتزاز قوية ومختلفة",
+      "المحركات": "محركان منفصلان",
+      "مقاومة الماء": "مقاوم للماء 100%",
+      "الشحن": "إعادة شحن عبر USB",
+      "الاستخدام": "لتحفيز البظر والبقعة G"
+    },
+    "features": [
+      "تحفيز مزدوج (داخلي وخارجي) لمتعة شاملة.",
+      "10 إعدادات اهتزاز قوية ومتنوعة.",
+      "مصنوع من سيليكون ناعم آمن وخالٍ من المواد الضارة.",
+      "مقاوم للماء بالكامل للاستخدام في الحمام.",
+      "مناسب للعب الفردي أو الزوجي."
+    ],
+    "howToUse": "1. اشحني الجهاز.\n2. استخدمي مزلق مائي.\n3. أدخلي الطرف المنحني ووجهي الجزء الخارجي نحو البظر.\n4. اختاري نمط الاهتزاز المفضل.",
+    "benefits": "وصول سريع ومكثف إلى النشوة بفضل التحفيز المتزامن للبظر والبقعة G."
+  },
+  {
+    "id": 4,
+    "name": "مدلك (العصا السحرية) القابل لإعادة الشحن - لون أبيض",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/31dE8DuB1PL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة"
+        ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "مدلكات عصا (Wand Massagers)",
+    "description": "مدلك عصا قوي ولاسلكي: يتميز بقوة فائقة وأداء لاسلكي مريح. يوفر اهتزازات متعددة السرعات والوظائف لتحفيز أي منطقة تريدينها. يمكن استخدامه لتدليك العضلات أو كأداة للمتعة الشخصية.",
+    "images": [
+      
+      "https://m.media-amazon.com/images/I/31dE8DuB1PL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/31X4640OleL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أبيض",
+      "أسود",
+      "وردي"
+    ],
+    "sizes": [
+      "مقاس كبير"
+    ],
+    "details": {
+      "النوع": "مدلك عصا هزاز (Wand Massager)",
+      "العلامة التجارية": "عام",
+      "الموديل": "لاسلكي قابل لإعادة الشحن",
+      "المادة": "رأس من السيليكون الناعم",
+      "أنماط الاهتزاز": "متعددة السرعات والوظائف",
+      "الطاقة": "لاسلكي (قابلة لإعادة الشحن)",
+      "الاستخدام": "لتحفيز الجسم أو تدليك العضلات"
+    },
+    "features": [
+      "اهتزازات عميقة وقوية جدًا.",
+      "تصميم لاسلكي مريح وسهل الاستخدام.",
+      "رأس مرن يتيح التوجيه الدقيق للاهتزاز.",
+      "بطارية تدوم طويلاً.",
+      "متعدد الاستخدامات للتدليك أو المتعة الشخصية."
+    ],
+    "howToUse": "1. اضغطي زر التشغيل لاختيار وضع الاهتزاز.\n2. استخدمي الرأس لتطبيق الاهتزاز على المنطقة المطلوبة.",
+    "benefits": "قوة اهتزاز لا مثيل لها لمتعة مكثفة أو تدليك عميق للعضلات."
+  },
+  {
+    "id": 5,
+    "name": "قضيب صناعي (ديلدو) واقعي من Doc Johnson - حجم 13.5 إنش - مادة ULTRASKYN - مع قاعدة شفط",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/814JP-G8WjL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة"
+        ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قضبان صناعية (Dildos)",
+    "description": "مصنوع يدويًا من مادة **ULTRASKYN** لتقديم الإحساس الواقعي المطلق. مصبوب مباشرةً عن نموذج 'Dredd' المشهور، يوفر ملمسًا وشكلاً واقعيًا للغاية. يأتي بقاعدة شفط قابلة للإزالة لتثبيته على أي سطح أملس أو استخدامه مع حزام (Harness).",
+    "images": [
+      "https://m.media-amazon.com/images/I/814JP-G8WjL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "بني شوكولاتة"
+    ],
+    "sizes": [
+      "طول 13.5 إنش"
+    ],
+    "details": {
+      "النوع": "قضيب صناعي (ديلدو) واقعي",
+      "العلامة التجارية": "Doc Johnson",
+      "الموديل": "Signature Series - Dredd",
+      "المادة": "ULTRASKYN (مادة شبيهة بالجلد وواقعية الملمس)",
+      "الطول": "13.5 بوصة",
+      "الميزات": "قاعدة شفط قابلة للإزالة، متوافق مع أحزمة الربط",
+      "الاستخدام": "إيلاج مهبلي وشرجي"
+    },
+    "features": [
+      "ملمس شديد الواقعية بفضل مادة ULTRASKYN.",
+      "قاعدة شفط قوية للاستخدام بدون يدين.",
+      "طول كبير لإحساس بالإشباع العميق.",
+      "سهل التنظيف وآمن على الجسم."
+    ],
+    "howToUse": "1. يُفضل استخدام مزلق مائي.\n2. يمكن تثبيته على سطح أملس باستخدام قاعدة الشفط.",
+    "benefits": "تجربة واقعية ومكثفة بفضل المواد عالية الجودة والواقعية."
+  },
+  {
+    "id": 6,
+    "name": "قضيب صناعي (ديلدو) مزدوج الأطراف - جل شفاف واقعي مع عروق - 11.8 إنش",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/41+jeJsOr7L._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة"
+        ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "قضبان صناعية مزدوجة الأطراف",
+    "description": "قضيب صناعي مزدوج الأطراف بطول 11.8 إنش، يتميز بشكل واقعي مع حشفة وعروق واضحة. المادة المصنوع منها هي الجل الشفاف (Jelly) الناعم وغير المسامي، مما يجعله سهل التنظيف ومتعدد الاستخدامات للعب الفردي أو مع الشريك.",
+    "images": [
+      "https://m.media-amazon.com/images/I/41osS1bDeSL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/41+jeJsOr7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51cXCmsvPXL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "شفاف"
+    ],
+    "sizes": [
+      "طول 11.8 إنش"
+    ],
+    "details": {
+      "النوع": "قضيب صناعي مزدوج الأطراف",
+      "العلامة التجارية": "عام",
+      "الموديل": "Double Dildo Clear Jelly",
+      "المادة": "جيل شفاف (Jelly) غير مسامي",
+      "الطول": "11.8 بوصة",
+      "الميزات": "رأس واقعي، عروق بارزة، تصميم مزدوج.",
+      "الاستخدام": "للمتعة المزدوجة أو الفردية، إيلاج مهبلي وشرجي"
+    },
+    "features": [
+      "متعة مضاعفة بفضل التصميم ثنائي الأطراف.",
+      "ملمس ناعم ولكنه صلب لإحساس مرضي.",
+      "شكل واقعي مع تفاصيل العروق والحشفة.",
+      "مادة غير مسامية لسهولة التعقيم والتنظيف."
+    ],
+    "howToUse": "1. استخدمي مزلق مائي على كلا الطرفين.\n2. يمكن استخدامه بشكل مزدوج أو فردي.",
+    "benefits": "مثالي للأزواج الذين يرغبون في الاستمتاع المشترك وتجربة المتعة من طرفين."
+  },
+  {
+    "id": 7,
+    "name": "مجموعة رؤوس مرفقة لجهاز التدليك (العصا الهزازة) - 6 قطع لتخفيف الضغط",
+    "price": "21 د.ك",
+    "originalPrice": "30 د.ك",
+    "discount": "30%",
+    "image": "https://m.media-amazon.com/images/I/61tt4N4qdhL._AC_SL1500_.jpg",
+    "badges": [
+      "توصيل سري بخصوصية تامة"
+        ],
+    "category": "ألعاب ومنتجات المتعة للبالغين",
+    "subcategory": "ملحقات أجهزة التدليك",
+    "description": "مجموعة شاملة: تأتي مع مدلك عصا قوي و6 رؤوس مرفقة مختلفة التصميم. كل قطعة مصممة خصيصًا لاستهداف مناطق معينة من الجسم مثل الظهر والرقبة والساقين واليدين لتخفيف آلام العضلات وضغطها. مثالية للاستخدام المنزلي والمكتبي.",
+    "images": [
+      "https://m.media-amazon.com/images/I/61tt4N4qdhL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71iyWxV5w7L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/31X4640OleL._AC_SL1500_.jpg"
+    ],
+    "colors": [
+      "أسود وشفاف"
+    ],
+    "sizes": [
+      "مجموعة 6 قطع"
+    ],
+    "details": {
+      "النوع": "مجموعة ملحقات لجهاز التدليك العصا",
+      "العلامة التجارية": "عام",
+      "الموديل": "Wand Massager Attachments",
+      "المادة": "سيليكون آمن ومرن",
+      "القطع": "6 رؤوس مرفقة مختلفة الأشكال",
+      "الميزات": "مصممة لتخفيف الضغط واستهداف مناطق محددة",
+      "الاستخدام": "للجسم بالكامل (الظهر، الرقبة، الساقين، اليدين... إلخ)"
+    },
+    "features": [
+      "تنوع في الرؤوس لتناسب جميع عضلات الجسم.",
+      "تخفيف فعال لآلام وتشنجات العضلات.",
+      "سهلة التركيب والإزالة والتنظيف.",
+      "يمكن استخدامها مع معظم أجهزة التدليك العصا القياسية."
+    ],
+    "howToUse": "1. قومي بتركيب الرأس المناسب لمنطقة التدليك على جهاز العصا.\n2. شغلي الجهاز واضغطي بلطف على المنطقة المستهدفة.",
+    "benefits": "تدليك علاجي عميق وشامل لجميع أجزاء الجسم."
+  },
+       
+        ];
+
+        // متغيرات نظام السلة
+        let cart = [];
+
+        // دالة لتحميل السلة من localStorage - تم تغيير المفتاح إلى "hmsaCart"
+        function loadCartFromLocalStorage() {
+            const savedCart = localStorage.getItem('hmsaCart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+                updateCartCount();
+            }
+        }
+
+        // دالة لحفظ السلة إلى localStorage - تم تغيير المفتاح إلى "hmsaCart"
+        function saveCartToLocalStorage() {
+            localStorage.setItem('hmsaCart', JSON.stringify(cart));
+        }
+
+        // دالة لتحديث عداد السلة
+        function updateCartCount() {
+            const cartCount = document.querySelector('.cart-count');
+            const floatingCartCount = document.querySelector('.floating-cart-count');
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            floatingCartCount.textContent = totalItems;
+        }
+
+        // دالة لإضافة منتج إلى السلة
+        function addToCart(productId, color = null, size = null) {
+            let product = products.find(p => p.id == productId);
+            
+            if (product) {
+                const existingItemIndex = cart.findIndex(item => 
+                    item.id === productId && 
+                    item.selectedColor === color && 
+                    item.selectedSize === size
+                );
+                
+                if (existingItemIndex > -1) {
+                    cart[existingItemIndex].quantity += 1;
+                } else {
+                    cart.push({
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        image: product.image,
+                        quantity: 1,
+                        selectedColor: color,
+                        selectedSize: size
+                    });
+                }
+                
+                saveCartToLocalStorage();
+                updateCartCount();
+            }
+        }
+
+        // دالة لعرض المنتجات (النسخة المحدثة من pro.1.html)
+        function renderProducts(productsArray, containerId) {
+            const productsContainer = document.getElementById(containerId);
+            if (!productsContainer) return; // تفادي الأخطاء إذا لم يتم العثور على الحاوية
+            
+            productsContainer.innerHTML = '';
+            
+            productsArray.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.setAttribute('data-id', product.id);
+                
+                let badgesHtml = '';
+                if (product.badges && product.badges.length > 0) {
+                    badgesHtml = '<div class="product-badges">';
+                    product.badges.forEach(badge => {
+                        // استخدام النصوص مباشرة من البيانات بدلاً من التبديل
+                        if (badge.includes("خصم")) {
+                             badgesHtml += `<span class="badge badge-discount">${badge}</span>`;
+                        } else if (badge.includes("جديد")) {
+                             badgesHtml += `<span class="badge badge-new">${badge}</span>`;
+                        } else if (badge.includes("حصري")) {
+                             badgesHtml += `<span class="badge badge-exclusive">${badge}</span>`;
+                        } else if (badge.includes("سريع")) {
+                             badgesHtml += `<span class="badge badge-fast-delivery">${badge}</span>`;
+                        } else if (badge.includes("سري")) {
+                             badgesHtml += `<span class="badge badge-confidential">${badge}</span>`;
+                        } else {
+                             badgesHtml += `<span class="badge" style="background-color: var(--primary-color)">${badge}</span>`;
+                        }
+                    });
+                    badgesHtml += '</div>';
+                }
+                
+                let priceHtml = `<p class="product-price">${product.price}`;
+                if (product.originalPrice) {
+                    priceHtml += ` <span class="original-price">${product.originalPrice}</span>`;
+                }
+                priceHtml += '</p>';
+                
+                // **** هذا هو التغيير الرئيسي: استخدام .product-image-container ****
+                productCard.innerHTML = `
+                    ${badgesHtml}
+                    <div class="product-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        ${priceHtml}
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="${product.id}">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+
+        // دالة لعرض صفحة المنتج (النسخة المحدثة من pro.1.html)
+        function showProductPage(productId) {
+            let product = products.find(p => p.id == productId);
+            
+            if (product) {
+                // --- MODIFICATION: Hide index.html elements ---
+                if(document.getElementById('hero-section')) {
+                    document.getElementById('hero-section').style.display = 'none';
+                }
+                if(document.getElementById('categories-section')) {
+                    document.getElementById('categories-section').style.display = 'none';
+                }
+                // --- End Modification ---
+
+                document.querySelectorAll('.products-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById('product-page').style.display = 'block';
+                
+                let priceHtml = `<p class="product-price-detail">${product.price}`;
+                if (product.originalPrice) {
+                    priceHtml += ` <span class="original-price">${product.originalPrice}</span>`;
+                }
+                priceHtml += '</p>';
+                
+                let badgesHtml = '';
+                if (product.badges && product.badges.length > 0) {
+                    badgesHtml = '<div class="product-badges">';
+                    product.badges.forEach(badge => {
+                        if (badge.includes("خصم")) {
+                             badgesHtml += `<span class="badge badge-discount">${badge}</span>`;
+                        } else if (badge.includes("جديد")) {
+                             badgesHtml += `<span class="badge badge-new">${badge}</span>`;
+                        } else if (badge.includes("حصري")) {
+                             badgesHtml += `<span class="badge badge-exclusive">${badge}</span>`;
+                        } else if (badge.includes("سريع")) {
+                             badgesHtml += `<span class="badge badge-fast-delivery">${badge}</span>`;
+                        } else if (badge.includes("سري")) {
+                             badgesHtml += `<span class="badge badge-confidential">${badge}</span>`;
+                        } else {
+                             badgesHtml += `<span class="badge" style="background-color: var(--primary-color)">${badge}</span>`;
+                        }
+                    });
+                    badgesHtml += '</div>';
+                }
+                
+                let thumbnailsHtml = '';
+                if (product.images && product.images.length > 0) {
+                    product.images.forEach((img, index) => {
+                        thumbnailsHtml += `<img src="${img}" alt="${product.name}" class="product-thumbnail ${index === 0 ? 'active' : ''}" data-image="${img}">`;
+                    });
+                }
+                
+                let colorsHtml = '';
+                if (product.colors && product.colors.length > 0) {
+                    colorsHtml = `
+                        <div class="product-options">
+                            <span class="option-title">اللون:</span>
+                            <div class="option-values">
+                                ${product.colors.map((color, index) => `
+                                    <span class="option-value ${index === 0 ? 'selected' : ''}" data-value="${color}">${color}</span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                let sizesHtml = '';
+                if (product.sizes && product.sizes.length > 0) {
+                    sizesHtml = `
+                        <div class="product-options">
+                            <span class="option-title">الحجم:</span>
+                            <div class="option-values">
+                                ${product.sizes.map((size, index) => `
+                                    <span class="option-value ${index === 0 ? 'selected' : ''}" data-value="${size}">${size}</span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                let detailsHtml = '';
+                if (product.details) {
+                    detailsHtml = `
+                        <h3>تفاصيل المنتج</h3>
+                        <table class="product-table">
+                            <tbody>
+                                ${Object.entries(product.details).map(([key, value]) => `
+                                    <tr>
+                                        <th>${key}</th>
+                                        <td>${value}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    `;
+                }
+                
+                document.getElementById('product-details').innerHTML = `
+                    <div class="product-gallery">
+                        ${badgesHtml}
+                        <img src="${product.images ? product.images[0] : product.image}" alt="${product.name}" class="main-product-image" id="main-product-image">
+                        <div class="product-thumbnails">
+                            ${thumbnailsHtml}
+                        </div>
+                    </div>
+                    <div class="product-info-detail">
+                        <h2 class="product-title-detail">${product.name}</h2>
+                        ${priceHtml}
+                        <p class="product-description">${product.description}</p>
+                        
+                        ${colorsHtml}
+                        ${sizesHtml}
+                        
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="${product.id}" id="add-to-cart-detail">أضف إلى السلة</button>
+                        </div>
+                        
+                        ${detailsHtml}
+                    </div>
+                `;
+                
+                document.querySelectorAll('.product-thumbnail').forEach(thumb => {
+                    thumb.addEventListener('click', function() {
+                        document.getElementById('main-product-image').src = this.getAttribute('data-image');
+                        document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+                
+                document.querySelectorAll('.option-value').forEach(option => {
+                    option.addEventListener('click', function() {
+                        this.parentElement.querySelectorAll('.option-value').forEach(o => o.classList.remove('selected'));
+                        this.classList.add('selected');
+                    });
+                });
+                
+                document.getElementById('add-to-cart-detail').addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    const selectedColor = document.querySelector('.product-options .option-value.selected[data-value]')?.getAttribute('data-value') || (product.colors ? product.colors[0] : null);
+                    const selectedSize = document.querySelector('.product-options .option-value.selected[data-value]')?.getAttribute('data-value') || (product.sizes ? product.sizes[0] : null);
+                    addToCart(product.id, selectedColor, selectedSize);
+                });                
+                
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        }
+
+        // دالة للعودة إلى قائمة المنتجات (معدلة لـ index.html)
+        function backToProducts() {
+            // --- MODIFICATION: Show index.html elements ---
+            if(document.getElementById('hero-section')) {
+                document.getElementById('hero-section').style.display = 'block';
+            }
+            if(document.getElementById('categories-section')) {
+                document.getElementById('categories-section').style.display = 'block';
+            }
+            // --- End Modification ---
+
+            document.querySelectorAll('.products-section').forEach(section => {
+                section.style.display = 'block';
+            });
+            document.getElementById('product-page').style.display = 'none';
+            document.getElementById('products-section').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // دالة لإظهار/إخفاء القائمة على الهواتف
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // تهيئة الصفحة عند التحميل (معدلة لـ index.html)
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCartFromLocalStorage();
+            
+            // --- NEW: Populate all 3 sections from the single product list ---
+            const allProducts = products;
+
+            // 1. Populate "Featured Products" (e.g., first 8)
+            const featured = allProducts.slice(0, 8);
+            renderProducts(featured, 'featured-products');
+
+            // 2. Populate "Under 99"
+            const under99 = allProducts.filter(p => parseFloat(p.price) <= 99);
+            renderProducts(under99, 'under-99-products');
+
+            // 3. Populate "Care Products" (Using "Accessories" as a stand-in)
+            const care = allProducts.filter(p => p.subcategory === "ملحقات أجهزة التدليك");
+            renderProducts(care, 'perfume-products');
+            // --- END NEW ---
+
+            
+            // Event listener for all "Add to Cart" buttons
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('add-to-cart')) {
+                    const productId = e.target.getAttribute('data-id');
+                    
+                    // Check if we are on the detail page to get options
+                    const detailButton = document.getElementById('add-to-cart-detail');
+                    if (detailButton && detailButton.contains(e.target)) {
+                        let product = products.find(p => p.id == productId);
+                        const selectedColor = document.querySelector('.product-options .option-value.selected[data-value]')?.getAttribute('data-value') || (product.colors ? product.colors[0] : null);
+                        const selectedSize = document.querySelector('.product-options .option-value.selected[data-value]')?.getAttribute('data-value') || (product.sizes ? product.sizes[0] : null);
+                        addToCart(productId, selectedColor, selectedSize);
+                    } else {
+                        // Otherwise, just add the product without options
+                        addToCart(productId);
+                    }
+                    e.stopPropagation();
+                }
+            });
+            
+            // Event listener for clicking on a product card to see details
+            document.addEventListener('click', function(e) {
+                // Check if the click is on a product card, but NOT on the 'add-to-cart' button
+                const productCard = e.target.closest('.product-card');
+                if (productCard && !e.target.closest('.add-to-cart')) {
+                    const productId = productCard.getAttribute('data-id');
+                    showProductPage(productId);
+                }
+            });
+            
+            // Back button listener
+            document.getElementById('back-to-products').addEventListener('click', backToProducts);
+            
+            // Floating cart listener
+            document.getElementById('floating-cart').addEventListener('click', function() {
+                 window.location.href = 'sk.html';
+            });
+            
+            // Header cart icon listener
+            document.getElementById('cart-icon').addEventListener('click', function(e) {
+                e.preventDefault();
+                 window.location.href = 'sk.html';
+            });
+            
+            // Category item click listener (from original index.html)
+            const categoryItems = document.querySelectorAll('.category-item');
+            categoryItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // This just adds the 'active' class, navigation is handled by the <a> tag
+                    categoryItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
